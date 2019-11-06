@@ -1,5 +1,5 @@
 #include "assignmentOperator.h"
-
+#include <cstring>
 
 CMyString::CMyString(char* pData )
 {
@@ -12,8 +12,8 @@ CMyString::CMyString(char* pData )
 	{
 		unsigned int ilength = strlen(pData);
 		m_pData = new char[ilength + 1];
-		strcpy_s(m_pData, ilength + 1,pData);
-		// strcpy(m_pData, pData);
+		//strcpy_s(m_pData, ilength + 1,pData);
+		 strcpy(m_pData, pData);
 	}
 }
 
@@ -21,8 +21,8 @@ CMyString::CMyString(const CMyString& str)
 {
 	unsigned int ilength = strlen(str.m_pData);
 	m_pData = new char[ilength + 1];
-	strcpy_s(m_pData,ilength+1, str.m_pData);
-	// strcpy(m_pData, str.m_pData);
+	//strcpy_s(m_pData,ilength+1, str.m_pData);
+	 strcpy(m_pData, str.m_pData);
 }
 
 CMyString::~CMyString()
@@ -45,8 +45,8 @@ CMyString& CMyString::operator = (const CMyString& str)
 
 	unsigned int ilength = strlen(str.m_pData);
 	m_pData = new char[ilength + 1];
-	strcpy_s(m_pData, ilength + 1, str.m_pData);	
-	// strcpy(m_pData, str.m_pData);
+	//strcpy_s(m_pData, ilength + 1, str.m_pData);	
+	strcpy(m_pData, str.m_pData);
 	return *this;
 }
 

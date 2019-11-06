@@ -63,6 +63,6 @@ int main(int argc, char* argv[])
 	Test1();
 	Test2();
 	Test3();
-	system("pause");
+//	system("pause");
 	return 0;
 }
