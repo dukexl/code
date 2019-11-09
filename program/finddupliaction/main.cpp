@@ -123,7 +123,7 @@ void test6()
 	test("Test6", numbers, 0, duplications, sizeof(duplications) / sizeof(int), false);
 }
 
-void main()
+int  main()
 {
 	test1();
 	test2();
@@ -131,5 +131,6 @@ void main()
 	test4();
 	test5();
 	test6();
-	system("pause");
+//	system("pause");
+	return 0;
 }
