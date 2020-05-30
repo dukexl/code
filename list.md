@@ -1,0 +1,12 @@
+C/C++编程开发经验
+C++多线程编程/分布式系统
+socket,TCP/IP，HTTP网络编程
+STL/UML
+C++11新特征
+面向对象编码思想
+数据结构，
+设计模式，
+算法
+CMake/shell/Makefile/GDB
+Mysql设计基本原则、事务概念、调优
+linux操作系统

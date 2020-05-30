@@ -1,0 +1,1 @@
+会自动查找路径下的Makefile 或 makefile
