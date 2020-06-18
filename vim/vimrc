@@ -1,0 +1,73 @@
+" 关闭兼容模式。提示：命令:help nocp可以看到 put it at the very start.
+set nocompatible
+
+" 设置可能会打开的文件的编码格式
+set fileencodings=utf-8,GBK,Big5
+
+" Tab显示为>--。含有LF换行的文件里，CR显示为$字符。
+set lcs=tab:>-,eol:$
+
+" 开启实时搜索功能
+set incsearch
+" 搜索时大小写不敏感
+set ignorecase
+" 高亮显示搜索结果
+set hlsearch
+" 提示：命令:noh可暂时关闭高亮显示
+
+" 开启文件类型侦测
+filetype on
+" 根据侦测到的不同类型加载对应的插件
+filetype plugin on
+
+" 开启语法高亮功能
+syntax enable
+" 允许用指定语法高亮配色方案替换默认方案
+syntax on
+
+" vim 自身命令行模式智能补全
+set wildmenu
+
+" 禁止折行
+set nowrap
+" 提示：命令:help zh和zl和zH和zL和zs和ze查看怎么滚动视图
+
+" 总是显示状态栏
+set laststatus=2
+" 显示光标当前位置
+set ruler
+" 开启行号显示
+set number
+" 高亮显示当前行/列
+set cursorline
+set cursorcolumn
+
+" 禁止光标闪烁
+set gcr=a:block-blinkon0
+" 禁止显示滚动条
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+" 禁止显示菜单和工具条
+set guioptions-=m
+set guioptions-=T
+
+" 缩进和Tab和空格相关的选项
+" 自适应不同语言的智能缩进
+filetype indent on
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数。tabstop 指定我们在插入模式下输入一个制表符占据的空格数量。
+set tabstop=4
+" 设置格式化时制表符占用空格数。
+set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+set softtabstop=4
+
+" 基于缩进或语法进行代码折叠
+"set foldmethod=indent
+set foldmethod=syntax
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+" 提示：命令za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠。
