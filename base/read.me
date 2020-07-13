@@ -1,3 +1,6 @@
+C++ 基础
+
+
 1)创建线程的入口函数如果是成员变函数为什么需要时静态函数
 原来非静态成员函数都会在参数列表中加上int一个this指针为为参数, 这样的话线程函数int就不符合调用规定了.
 比如 int ThreadFun(int); 是非静态的,实际编译后,就会变成 int ThreadFun(int, CMyClass *this); 
