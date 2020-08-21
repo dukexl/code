@@ -1,16 +1,16 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstring>
 using namespace std;
 struct Person
-{ //Ö°¹¤»ù±¾ĞÅÏ¢µÄ½á¹¹
+{ //èŒå·¥åŸºæœ¬ä¿¡æ¯çš„ç»“æ„
 	double salary;
 	char *name;
 };
 class SalaryManaege
 {
-	Person *employ; //´æ·ÅÖ°¹¤ĞÅÏ¢µÄÊı×é
-	int max;        //Êı×éÏÂ±êÉÏ½ç
-	int n;          //Êı×éÖĞµÄÊµ¼ÊÖ°¹¤ÈËÊı
+	Person *employ; //å­˜æ”¾èŒå·¥ä¿¡æ¯çš„æ•°ç»„
+	int max;        //æ•°ç»„ä¸‹æ ‡ä¸Šç•Œ
+	int n;          //æ•°ç»„ä¸­çš„å®é™…èŒå·¥äººæ•°
 public:
 	SalaryManaege(int Max = 0)
 	{
@@ -18,15 +18,15 @@ public:
 		n = 0;
 		employ = new Person[max];
 	}
-	//·µ»ØÒıÓÃÌØĞÔÊÇ¿ÉÒÔÖ±½ÓÔÚ·ÅÔÚ×óÖµ£¬Ö±½ÓÊ¹ÓÃ
-	double &operator[](char *Name)
-	{ //ÖØÔØ[]£¬·µ»ØÒıÓÃ
+	//è¿”å›å¼•ç”¨ç‰¹æ€§æ˜¯å¯ä»¥ç›´æ¥åœ¨æ”¾åœ¨å·¦å€¼ï¼Œç›´æ¥ä½¿ç”¨
+	double &operator[](const char *Name)
+	{ //é‡è½½[]ï¼Œè¿”å›å¼•ç”¨
 		Person *p;
 		for (p = employ; p < employ + n; p++)
-			//Èç¹û´æÔÚ´¦Àí
+			//å¦‚æœå­˜åœ¨å¤„ç†
 			if (strcmp(p->name, Name) == 0)
 				return p->salary;
-		//²»´æÔÚÇé¿ö´¦Àí
+		//ä¸å­˜åœ¨æƒ…å†µå¤„ç†
 		p = employ + n++;
 		p->name = new char[strlen(Name) + 1];
 		strcpy(p->name, Name);
@@ -46,13 +46,13 @@ public:
 int main()
 {
 	SalaryManaege s(3);
-	s["ÕÅÈı"] = 2188.88;
-	s["ÀïË¹"] = 1230.07;
-	s["ÍõÎŞ"] = 3200.97;
-	cout << "ÕÅÈı\t" << s["ÕÅÈı"] << endl;
-	cout << "ÀïË¹\t" << s["ÀïË¹"] << endl;
-	cout << "ÍõÎŞ\t" << s["ÍõÎŞ"] << endl;
+	s["å¼ ä¸‰"] = 2188.88;
+	s["é‡Œæ–¯"] = 1230.07;
+	s["ç‹æ— "] = 3200.97;
+	cout << "å¼ ä¸‰\t" << s["å¼ ä¸‰"] << endl;
+	cout << "é‡Œæ–¯\t" << s["é‡Œæ–¯"] << endl;
+	cout << "ç‹æ— \t" << s["ç‹æ— "] << endl;
 
-	cout << "-------ÏÂÎªdisplayµÄÊä³ö--------\n\n";
+	cout << "-------ä¸‹ä¸ºdisplayçš„è¾“å‡º--------\n\n";
 	s.display();
 }
