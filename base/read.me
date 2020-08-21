@@ -1,5 +1,30 @@
 C++ 基础
 
+1.const
+2.override 重载[] 等等
+3.static
+4.this
+5.inline
+6.sizeof
+7.函数指针
+8.纯虚函数和抽象类
+9.vptr_vtable
+10.virtual
+11.volatile
+12.assert
+13.位域
+14.extern
+15.sturct,class,union,enum,decltype
+16.c实现C++多态
+17.explicit
+18.friend
+19.using
+20.::
+21.引用与指针
+22.宏
+
+
+问题总结：
 
 1)创建线程的入口函数如果是成员变函数为什么需要时静态函数
 原来非静态成员函数都会在参数列表中加上int一个this指针为为参数, 这样的话线程函数int就不符合调用规定了.
@@ -7,4 +32,13 @@ C++ 基础
 这个函数就明显不能作为线程的函数了, 因为多了个参数.所以编译就过不了了.
 加上static修饰后，类的成员函数就不会被加上默认的this参数，所以就符合调用规定了
 
-2）static 
+2)不建议使用从字符串常量到‘char*’的转换 [-Werror=write-strings] 添加const
+3)timer_create等函数除了需包含<time.h>外,g++还要添加-lrt选项才能链接
+
+
+
+
+
+
+
+

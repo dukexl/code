@@ -6,6 +6,7 @@ struct Person
 	double salary;
 	char *name;
 };
+
 class SalaryManaege
 {
 	Person *employ; //存放职工信息的数组
@@ -43,6 +44,7 @@ public:
 		delete employ;
 	}
 };
+
 int main()
 {
 	SalaryManaege s(3);
