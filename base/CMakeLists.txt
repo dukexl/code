@@ -1,4 +1,5 @@
 add_executable(codestyle codestyle.cpp)
+add_executable(RAII RAII.cpp)
 
 add_executable(override override.cpp)
 
