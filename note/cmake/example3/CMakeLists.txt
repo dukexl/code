@@ -7,12 +7,15 @@ configure_file (
     "${PROJECT_SOURCE_DIR}/config.h.in"
     "${PROJECT_BINARY_DIR}/config.h"
     )
+message(${PROJECT_BINARY_DIR})
 # 是否使用自己的 MathFunctions 库
-option (USE_MYMATH
-        "Use provided math implementation" ON)
+option (USE_MYMATH "Use provided math implementation" ON) #undef USE_MYMATH
+#option (USE_MYMATH "Use provided math implementation" OFF)
 # 是否加入 MathFunctions 库
 if (USE_MYMATH)
     include_directories ("${PROJECT_SOURCE_DIR}/math")
+	include_directories("${PROJECT_BINARY_DIR}/")
+	#message(${PROJECT_BINARY_DIR}/)
     add_subdirectory (math)
     set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
 endif (USE_MYMATH)
