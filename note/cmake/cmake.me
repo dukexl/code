@@ -190,10 +190,11 @@ add_definitions(-DENABLE_DEBUG -DABC) # 参数之间用空格分隔
 
 
 
-5.target_include_directories(client PRIVATE include) 加头文件
-  include_directories(./include) 增加头文件目录
+14.头文件
+14.1 target_include_directories(client PRIVATE include) 加头文件
+include_directories(./include) 增加头文件目录
 
-6.add_library(<name> [STATIC | SHARED | MODULE]
+14.2 add_library(<name> [STATIC | SHARED | MODULE]
             [EXCLUDE_FROM_ALL]
             [source1] [source2] [...])  指定的源文件生成链接文件
   target_link_libraries(<target> [item1] [item2] [...]
@@ -201,17 +202,17 @@ add_definitions(-DENABLE_DEBUG -DABC) # 参数之间用空格分隔
   eg:target_link_libraries(client PRIVATE common) 目标文件与库文件进行连接
   link_directories(lib)  eg:link_directories(./lib) 添加lib文件目录
 
-7.add_subdirectory(tests) 增加测试
+14.3 add_subdirectory(tests) 增加测试
 
-8.include(CTest)  用来载入并运行来自于文件或模块的CMake代码
+14.4 include(CTest)  用来载入并运行来自于文件或模块的CMake代码
 
-9.c++ 标准版本
+14.5 c++ 标准版本
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 set(CMAKE_CXX_STANDARD 14)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 set(CMAKE_CXX_STANDARD 14)
 
-10.add_test
+14.6 add_test
 add_test(NAME craft_test
          COMMAND craft --gtest_output='xml:report.xml')
