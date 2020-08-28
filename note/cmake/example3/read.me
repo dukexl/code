@@ -1,0 +1,13 @@
+1.cmake 允许为项目增加编译选项，从而可以根据用户的环境和需求选择最合适的编译方案。
+例如，可以将 MathFunctions 库设为一个可选的库，如果该选项为 ON ，就使用该库定义的数学函数来进行运算，否则就调用标准库中的数学函数库。
+eg:CMakeLists.txt
+
+2.configure_file 命令用于加入一个配置头文件 config.h ，这个文件由 cmake 从 config.h.in 生成，通过这样的机制，将可以通过预定义一些参数和变量来控制代码的生成。
+option 命令添加了一个 USE_MYMATH 选项，并且默认值为 ON 。根据 USE_MYMATH 变量的值来决定是否使用我们自己编写的 MathFunctions 库。
+修改 main.cc 文件，让其根据 USE_MYMATH 的预定义值来决定是否调用标准库还是MathFunctions 库
+eg:main
+
+3.编写 config.h.in 文件
+注意 main.cc 的第一行，这里引用了一个 config.h 文件，这个文件预定义了 USE_MYMATH 的值。但我们并不直接编写这个文件，为了方便从 CMakeLists.txt 中导入配置，我们编写一个 config.h.in 文件，
+eg:config.h.in
+这样 cmake 会自动根据 CMakeLists.txt 配置文件中的设置自动生成 config.h 文件
