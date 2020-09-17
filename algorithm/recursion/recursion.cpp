@@ -78,34 +78,34 @@ void TestFib()
 	clock_t start, finish;
 
 	start = clock();
-	printf("计算结果：%d\n", fib(40));
+	printf("fib(40)=%d\n", fib(40));
 	finish = clock();
-	printf("计算时间：%lu\n", finish - start);
+	printf("鑰楁椂%lu\n", finish - start);
 
 	start = clock();
-	printf("计算结果：%d\n", fibFor(40));
+	printf("fibFor(40)=%d\n", fibFor(40));
 	finish = clock();
-	printf("计算时间：%lu\n", finish - start);
+	printf("鑰楁椂%lu\n", finish - start);
 
 	start = clock();
-	printf("计算结果：%d\n", tailfib(40, 1, 1));
+	printf("tailfib(40)=%d\n", tailfib(40, 1, 1));
 	finish = clock();
-	printf("计算时间：%lu\n", finish - start);
+	printf("鑰楁椂%lu\n", finish - start);
 
 	start = clock();
-	printf("计算结果：%d\n", fac(30));
+	printf("fac(30)=%d\n", fac(30));
 	finish = clock();
-	printf("计算时间：%lu\n", finish - start);
+	printf("鑰楁椂%lu\n", finish - start);
 
 	start = clock();
-	printf("计算结果：%d\n", facFor(30));
+	printf("facFor(30)=%d\n", facFor(30));
 	finish = clock();
-	printf("计算时间：%lu\n", finish - start);
+	printf("鑰楁椂%lu\n", finish - start);
 
 	start = clock();
-	printf("计算结果：%d\n", tailfac(30, 1));
+	printf("tailfac(30)=%d\n", tailfac(30, 1));
 	finish = clock();
-	printf("计算时间：%lu\n", finish - start);
+	printf("鑰楁椂%lu\n", finish - start);
 }
 
 int max(int *values, int size)
@@ -122,40 +122,46 @@ int max(int *values, int size)
 	return mval;
 }
 
-//bool FinTNode(TNode* tr, int key)
-//{
-//	if (tr==NULL)
-//	{
-//		return false
-//	}
-//
-//	if (tr->key == key)
-//	{
-//		return true
-//	}
-//	else
-//	{
-//		return FinTNode(tr->right, key);
-//	}
-//}
-//
-//bool FinTNodeFor(TNode* tr, int key)
-//{
-//	TNode *curNode = tr;
-//	while (curNode != NULL)
-//	{
-//		if (curNode->key == key)
-//		{
-//			return true;
-//		}
-//
-//		if (key < curNode->key)
-//		{
-//			curNode = curNode->left;
-//		}
-//		else
-//			curNode = curNode->right;
-//	}
-//
-//	return false;
-//}
+bool FinTNode(TNode* tr, int key)
+{
+	if (tr==NULL)
+	{
+		return false
+	}
+
+	if (tr->key == key)
+	{
+		return true
+	}
+	else
+	{
+		return FinTNode(tr->right, key);
+	}
+}
+
+bool FinTNodeFor(TNode* tr, int key)
+{
+	TNode *curNode = tr;
+	while (curNode != NULL)
+	{
+		if (curNode->key == key)
+		{
+			return true;
+		}
+
+		if (key < curNode->key)
+		{
+			curNode = curNode->left;
+		}
+		else
+			curNode = curNode->right;
+	}
+
+	return false;
+}
+
+int main()
+{
+    TestFib();
+	return 0;
+}

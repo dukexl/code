@@ -1,12 +1,16 @@
 #ifndef _RECURSION_H_
 #define _RECURSION_H_
-
-int fib(int n);                          // 斐波那契数列递归算法
-int tailfib(int n, int acc1, int acc2);  // 斐波那契数类尾递归算法
+struct TNode
+{
+	int key;
+	TNode *next;
+}
+int fib(int n);                        
+int tailfib(int n, int acc1, int acc2);  
 int fibFor(int n);
 
-long long fac(int n);                    // N!递归算法
-long long tailfac(int n, long long sum); // N!尾递归算法
+long long fac(int n);                  
+long long tailfac(int n, long long sum); 
 long long facFor(int n);
 void TestFib();
 
