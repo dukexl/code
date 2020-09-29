@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Ã¶¾ÙÀà£¬·ÀÖ¹enumÀïÃæµÄÏî³åÍ»£¬»òÕßÓÃÃüÃû¿Õ¼äÃ¶¾Ù
+// æšä¸¾ç±»ï¼Œé˜²æ­¢enumé‡Œé¢çš„é¡¹å†²çªï¼Œæˆ–è€…ç”¨å‘½åç©ºé—´æšä¸¾
 enum class shared_type
 {
 	circle,
@@ -16,40 +16,44 @@ class shape
 {
 public:
 	shape() { cout << "shape" << endl; }
-	virtual void print() {
+	virtual void print()
+	{
 		cout << "I am shape!" << endl;
 	}
-	virtual ~shape(){}
+	virtual ~shape() {}
 };
 
-class circle :public shape
+class circle : public shape
 {
 public:
 	circle() { cout << "circle" << endl; }
-	void print() {
+	void print()
+	{
 		cout << "I am circle!" << endl;
 	}
 };
 
-class triangle :public shape
+class triangle : public shape
 {
 public:
 	triangle() { cout << "triangle" << endl; }
-	void print() {
+	void print()
+	{
 		cout << "I am triangle!" << endl;
 	}
 };
 
-class rectangle :public shape
+class rectangle : public shape
 {
 public:
 	rectangle() { cout << "rectangle" << endl; }
-	void print() {
+	void print()
+	{
 		cout << "I am rectangle!" << endl;
 	}
 };
 
-shape* create_shape(shared_type type)
+shape *create_shape(shared_type type)
 {
 	switch (type)
 	{
@@ -68,13 +72,14 @@ shape* create_shape(shared_type type)
 class shape_wrapper
 {
 public:
-	explicit shape_wrapper(shape* ptr = nullptr):ptr_(ptr){}
+	explicit shape_wrapper(shape *ptr = nullptr) : ptr_(ptr) {}
 	~shape_wrapper()
 	{
 		delete ptr_;
 	}
 
-	shape* get()const {
+	shape *get() const
+	{
 		return ptr_;
 	}
 
@@ -88,7 +93,9 @@ void foo()
 	ptr.get()->print();
 }
 
-class bar{};
+class bar
+{
+};
 
 void foo_heap()
 {
@@ -97,7 +104,8 @@ void foo_heap()
 	delete ptr;
 }
 
-bar *make_bar() {
+bar *make_bar()
+{
 	bar *ptr = nullptr;
 	try
 	{
@@ -149,12 +157,12 @@ void test_stack()
 
 int main()
 {
-	// µÚÒ»ÖÖ·½Ê½
+	// ç¬¬ä¸€ç§æ–¹å¼
 	shape *sp = create_shape(shared_type::circle);
 	sp->print();
 	delete sp;
 
-	// µÚ¶şÖÖ
+	// ç¬¬äºŒç§
 	foo();
 	return 0;
 }

@@ -6,10 +6,10 @@ int SequenceSearch(int a[], int value, int n)
 	{
 		if (value == a[i])
 		{
-			return i; // ÕÒµ½Î»ÖÃÎªi
+			return i; // æ‰¾åˆ°ä½ç½®ä¸ºi
 		}
 	}
-	return -1; // Ã»ÕÒµ½
+	return -1; // æ²¡æ‰¾åˆ°
 }
 
 int BinarySearch(int a[], int value, int n)
@@ -18,8 +18,8 @@ int BinarySearch(int a[], int value, int n)
 
 	while (iLow <= iHigh)
 	{
-		iMid = iLow + (iHigh-iLow) / 2;
-		if (value == a[iMid])  // ·ÅÔÚ×îºó
+		iMid = iLow + (iHigh - iLow) / 2;
+		if (value == a[iMid]) // æ”¾åœ¨æœ€å
 		{
 			return iMid;
 		}
@@ -38,18 +38,18 @@ int BinarySearch(int a[], int value, int n)
 
 int BinarySearchRecursion(int a[], int value, int low, int high)
 {
-	int mid = (high+low) / 2;
+	int mid = (high + low) / 2;
 	if (a[mid] == value)
 	{
 		return mid;
 	}
 
-	if (a[mid]>value)
+	if (a[mid] > value)
 	{
 		return BinarySearchRecursion(a, value, low, mid - 1);
 	}
 
-	if (a[mid]<value)
+	if (a[mid] < value)
 	{
 		return BinarySearchRecursion(a, value, mid + 1, high);
 	}
@@ -58,20 +58,19 @@ int BinarySearchRecursion(int a[], int value, int low, int high)
 int InsertionSearch(int a[], int value, int low, int high)
 {
 	int mid = low + (value - a[low]) / (a[high] - a[low] * (high - low));
-	if (a[mid]==value)
+	if (a[mid] == value)
 	{
 		return mid;
 	}
-	if (a[mid]>value)
+	if (a[mid] > value)
 	{
 		return InsertionSearch(a, value, low, mid - 1);
 	}
-	if (a[mid]<value)
+	if (a[mid] < value)
 	{
 		return InsertionSearch(a, value, mid + 1, high);
 	}
 }
-
 
 int FibonacciSearch(int *a, int n, int key)
 {

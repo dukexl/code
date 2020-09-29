@@ -1,9 +1,11 @@
 #include <iostream>
 
 using namespace std;
-// 在创建枚举时，将它们放在名称空间中，以便可以使用有意义的名称访问它们:
-namespace EntityType {
-	enum Enum {
+// 鍦ㄥ垱寤烘灇涓炬椂锛屽皢瀹冧滑鏀惧湪鍚嶇О绌洪棿涓紝浠ヤ究鍙互浣跨敤鏈夋剰涔夌殑鍚嶇О璁块棶瀹冧滑:
+namespace EntityType
+{
+	enum Enum
+	{
 		Ground = 0,
 		Human,
 		Aerial,
@@ -13,13 +15,15 @@ namespace EntityType {
 
 void foo(EntityType::Enum entityType)
 {
-	if (entityType == EntityType::Ground) {
+	if (entityType == EntityType::Ground)
+	{
 		/*code*/
 	}
 }
 
 // enum class
-enum class EntityType1 {
+enum class EntityType1
+{
 	Ground = 0,
 	Human,
 	Aerial,
@@ -28,12 +32,14 @@ enum class EntityType1 {
 
 void foo(EntityType1 entityType)
 {
-	if (entityType == EntityType1::Ground) {
+	if (entityType == EntityType1::Ground)
+	{
 		/*code*/
 	}
 }
 
-int main() {
+int main()
+{
 
 	return 0;
 }

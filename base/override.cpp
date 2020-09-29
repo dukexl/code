@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cstring>
 using namespace std;
 struct Person
@@ -10,8 +10,8 @@ struct Person
 class SalaryManaege
 {
 	Person *employ; //存放职工信息的数组
-	int max;        //数组下标上界
-	int n;          //数组中的实际职工人数
+	int max;		//数组下标上界
+	int n;			//数组中的实际职工人数
 public:
 	SalaryManaege(int Max = 0)
 	{
@@ -40,7 +40,8 @@ public:
 		for (int i = 0; i < n; i++)
 			cout << employ[i].name << "   " << employ[i].salary << endl;
 	}
-	~SalaryManaege() {
+	~SalaryManaege()
+	{
 		delete employ;
 	}
 };

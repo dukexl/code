@@ -2,9 +2,9 @@
 #include <iostream>
 using namespace std;
 
-void Print(int a[],int n)
+void Print(int a[], int n)
 {
-	for (int j = 0; j < n;j++)
+	for (int j = 0; j < n; j++)
 	{
 		cout << a[j] << " ";
 	}
@@ -13,14 +13,14 @@ void Print(int a[],int n)
 
 void InsertSort(int a[], int n)
 {
-	for (int i = 1; i < n;i++)
+	for (int i = 1; i < n; i++)
 	{
-		if (a[i] < a[i-1]) //ÉýÐò
+		if (a[i] < a[i - 1]) //å‡åº
 		{
 			int j = i - 1;
 			int x = a[i];
-			a[i] = a[i - 1];			
-			while ( x< a[j] && j>=0)
+			a[i] = a[i - 1];
+			while (x < a[j] && j >= 0)
 			{
 				a[j + 1] = a[j];
 				j--;
@@ -31,15 +31,15 @@ void InsertSort(int a[], int n)
 
 void ShellInsertSort(int a[], int n, int dk)
 {
-	for (int i = dk; i < n;++i)
+	for (int i = dk; i < n; ++i)
 	{
-		if (a[i] < a[i-dk])
+		if (a[i] < a[i - dk])
 		{
 			int j = i - dk;
 			int x = a[i];
 			a[i] = a[i - dk];
 
-			while (x<a[j] && j>=0)
+			while (x < a[j] && j >= 0)
 			{
 				a[j + dk] = a[j];
 				j -= dk;
@@ -51,8 +51,8 @@ void ShellInsertSort(int a[], int n, int dk)
 
 void ShellSort(int a[], int n)
 {
-	int dk = n / 2;  // Ï£¶ûÐòÁÐ£¨n/2,n/4,....1)
-	while (dk>=1)
+	int dk = n / 2; // å¸Œå°”åºåˆ—ï¼ˆn/2,n/4,....1)
+	while (dk >= 1)
 	{
 		ShellInsertSort(a, n, dk);
 		dk = dk / 2;
@@ -62,9 +62,9 @@ void ShellSort(int a[], int n)
 int SelectMinKey(int a[], int n, int i)
 {
 	int k = i;
-	for (int j = i + 1; j < n;++j)
+	for (int j = i + 1; j < n; ++j)
 	{
-		if (a[k]>a[j])
+		if (a[k] > a[j])
 		{
 			k = j;
 		}
@@ -75,7 +75,7 @@ int SelectMinKey(int a[], int n, int i)
 void selectSort(int a[], int n)
 {
 	int key, tmp;
-	for (int i = 0; i < n;++i)
+	for (int i = 0; i < n; ++i)
 	{
 		key = SelectMinKey(a, n, i);
 		if (key != i)
@@ -90,17 +90,17 @@ void selectSort(int a[], int n)
 void SelectSortTwo(int a[], int n)
 {
 	int i, j, min, max, tmp;
-	for (i = 1; i <= n / 2;i++)
+	for (i = 1; i <= n / 2; i++)
 	{
 		min = max = i;
-		for (j = i + 1; j <= n - i;j++)
+		for (j = i + 1; j <= n - i; j++)
 		{
-			if (a[j]>a[max])
+			if (a[j] > a[max])
 			{
 				max = j;
 			}
 
-			if (a[j]<a[min])
+			if (a[j] < a[min])
 			{
 				min = j;
 			}
@@ -119,9 +119,9 @@ void HeapAdjust(int a[], int s, int length)
 {
 	int tmp = a[s];
 	int child = 2 * s + 1;
-	while (child<length)
+	while (child < length)
 	{
-		if (child +1 <length && a[child] <a[child+1])
+		if (child + 1 < length && a[child] < a[child + 1])
 		{
 			++child;
 		}
@@ -142,7 +142,7 @@ void HeapAdjust(int a[], int s, int length)
 
 void BuildingHeap(int a[], int length)
 {
-	for (int i = (length - 1) / 2; i >= 0;--i)
+	for (int i = (length - 1) / 2; i >= 0; --i)
 	{
 		HeapAdjust(a, i, length);
 	}
@@ -150,11 +150,11 @@ void BuildingHeap(int a[], int length)
 
 void HeapSort(int a[], int length)
 {
-	//³õÊ¼¶Ñ
+	//åˆå§‹å †
 	BuildingHeap(a, length);
 
-	// ´Ó×îºóÒ»¸öÔªËØ¿ªÊ¼¶ÔÐòÁÐ½øÐÐµ÷Õû
-	for (int i = length - 1; i > 0;--i)
+	// ä»Žæœ€åŽä¸€ä¸ªå…ƒç´ å¼€å§‹å¯¹åºåˆ—è¿›è¡Œè°ƒæ•´
+	for (int i = length - 1; i > 0; --i)
 	{
 		int tmp = a[i];
 		a[i] = a[0];
@@ -165,11 +165,11 @@ void HeapSort(int a[], int length)
 
 void bubbleSort(int a[], int n)
 {
-	for (int i = 0; i < n - 1;++i)
+	for (int i = 0; i < n - 1; ++i)
 	{
-		for (int j = 0; j < n - i - 1;++j)
+		for (int j = 0; j < n - i - 1; ++j)
 		{
-			if (a[j] > a[j+1])
+			if (a[j] > a[j + 1])
 			{
 				int tmp = a[j];
 				a[j] = a[j + 1];
@@ -182,12 +182,12 @@ void bubbleSort(int a[], int n)
 void bubbleSort1(int a[], int n)
 {
 	int i = n - 1;
-	while (i>0)
+	while (i > 0)
 	{
 		int pos = 0;
-		for (int j = 0; j < i;j++)
+		for (int j = 0; j < i; j++)
 		{
-			if (a[j]>a[j+1])
+			if (a[j] > a[j + 1])
 			{
 				pos = j;
 				int tmp = a[j];
@@ -206,9 +206,9 @@ void bubbleSort2(int a[], int n)
 	int tmp, j;
 	while (low < high)
 	{
-		for (j = low; j < high;++j)
+		for (j = low; j < high; ++j)
 		{
-			if (a[j]>a[j+1])
+			if (a[j] > a[j + 1])
 			{
 				tmp = a[j];
 				a[j] = a[j + 1];
@@ -216,9 +216,9 @@ void bubbleSort2(int a[], int n)
 			}
 		}
 		--high;
-		for (j = high; j > low;--j)
+		for (j = high; j > low; --j)
 		{
-			if (a[j]<a[j-1])
+			if (a[j] < a[j - 1])
 			{
 				tmp = a[j];
 				a[j] = a[j - 1];
@@ -239,15 +239,15 @@ void swap(int &a, int &b)
 int partition(int a[], int low, int high)
 {
 	int privotKey = a[low];
-	while (low<high)
+	while (low < high)
 	{
-		while (low<high && a[high]>=privotKey)
+		while (low < high && a[high] >= privotKey)
 		{
 			--high;
 		}
 		swap(a[low], a[high]);
 
-		while (low<high && a[low]<= privotKey)
+		while (low < high && a[low] <= privotKey)
 		{
 			++low;
 		}
@@ -258,7 +258,7 @@ int partition(int a[], int low, int high)
 
 void quickSort(int a[], int low, int high)
 {
-	if (low<high)
+	if (low < high)
 	{
 		int privotLoc = partition(a, low, high);
 		quickSort(a, low, privotLoc - 1);
@@ -268,7 +268,7 @@ void quickSort(int a[], int low, int high)
 
 void quickSortImprove(int a[], int low, int high, int k)
 {
-	if (high-low>k)
+	if (high - low > k)
 	{
 		int pivot = partition(a, low, high);
 		quickSortImprove(a, low, pivot - 1, k);
@@ -279,9 +279,9 @@ void quickSortImprove(int a[], int low, int high, int k)
 void Merge(int *a, int *b, int i, int m, int n)
 {
 	int j, k;
-	for (j = m + 1, k = i; i <= m&&j <= n;++k)
+	for (j = m + 1, k = i; i <= m && j <= n; ++k)
 	{
-		if (a[j]<a[i])
+		if (a[j] < a[i])
 		{
 			b[k] = a[j++];
 		}
@@ -290,11 +290,11 @@ void Merge(int *a, int *b, int i, int m, int n)
 			b[k] = a[i++];
 		}
 	}
-	while (i<=m)
+	while (i <= m)
 	{
 		b[k++] = a[i++];
 	}
-	while (j<=n)
+	while (j <= n)
 	{
 		b[k++] = a[j++];
 	}
@@ -306,18 +306,18 @@ void MergeSort(int *a, int *b, int length)
 	int *q = a;
 	int *tmp;
 
-	while (len<length)
+	while (len < length)
 	{
 		int s = len;
 		len = 2 * s;
 		int i = 0;
-		while (i+len<length)
+		while (i + len < length)
 		{
 			Merge(q, b, i, i + s - 1, i + len - 1);
 			i = i + len;
 		}
 
-		if (i+s<length)
+		if (i + s < length)
 		{
 			Merge(q, b, i, i + s - 1, length - 1);
 		}
@@ -329,8 +329,8 @@ void MergeSort(int *a, int *b, int length)
 
 void Msort(int *a, int *b, int s, int t)
 {
-	int *tmp=b;
-	if (s==t)
+	int *tmp = b;
+	if (s == t)
 	{
 		a[s] = b[s];
 	}
@@ -343,7 +343,6 @@ void Msort(int *a, int *b, int s, int t)
 	}
 }
 
-
 void MergeSortRecusive(int *a, int *b, int n)
 {
 	Msort(a, b, 0, n - 1);
@@ -351,5 +350,4 @@ void MergeSortRecusive(int *a, int *b, int n)
 
 void RadixSort(int a[], int m, int n)
 {
-
 }

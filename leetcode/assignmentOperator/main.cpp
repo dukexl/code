@@ -4,7 +4,7 @@ void Test1()
 {
 	printf("Test1 begins:\n");
 
-	char* text = "Hello world";
+	char *text = "Hello world";
 
 	CMyString str1(text);
 	CMyString str2;
@@ -17,12 +17,12 @@ void Test1()
 	printf(".\n");
 }
 
-// ¸³Öµ¸ø×Ô¼º
+// èµ‹å€¼ç»™è‡ªå·±
 void Test2()
 {
 	printf("Test2 begins:\n");
 
-	char* text = "Hello world";
+	char *text = "Hello world";
 
 	CMyString str1(text);
 	str1 = str1;
@@ -34,12 +34,12 @@ void Test2()
 	printf(".\n");
 }
 
-// Á¬Ðø¸³Öµ
+// è¿žç»­èµ‹å€¼
 void Test3()
 {
 	printf("Test3 begins:\n");
 
-	char* text = "Hello world";
+	char *text = "Hello world";
 
 	CMyString str1(text);
 	CMyString str2, str3;
@@ -58,11 +58,11 @@ void Test3()
 	printf(".\n");
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	Test1();
 	Test2();
 	Test3();
-//	system("pause");
+	//	system("pause");
 	return 0;
 }

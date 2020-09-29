@@ -4,42 +4,40 @@ using namespace std;
 bool duplicate(int array[], int ilength, int &iduplication)
 {
 	// check data correct
-	if (array == nullptr || ilength <=0)
+	if (array == nullptr || ilength <= 0)
 	{
 		return true;
-	}	
+	}
 
-	for (int i = 0; i < ilength;i++)
+	for (int i = 0; i < ilength; i++)
 	{
-		if (array[i]<0 || array[i] >=ilength)
+		if (array[i] < 0 || array[i] >= ilength)
 		{
-			return true; // Êı¾İ²»ÕıÈ·
-		}	
+			return true; // æ•°æ®ä¸æ­£ç¡®
+		}
 	}
 
 	if (ilength == 1)
 	{
 		return false;
 	}
-	
 
-	for (int i = 0; i < ilength;i++)
+	for (int i = 0; i < ilength; i++)
 	{
-		while (array[i] != i) // ºËĞÄ£ºn¸öÊı¶¼ÔÚ[0:n-1],ÒªÏë²»ÖØ¸´£¬Ã¿¸öÎ»ÖÃÉÏ±ØĞëÒ»Ò»¶ÔÓ¦£¬array[i]²»ÔÚiµÄÎ»ÖÃÉÏ£¬¾Í°ÑËü·Åµ½Î»ÖÃiÉÏÈ¥
+		while (array[i] != i) // æ ¸å¿ƒï¼šnä¸ªæ•°éƒ½åœ¨[0:n-1],è¦æƒ³ä¸é‡å¤ï¼Œæ¯ä¸ªä½ç½®ä¸Šå¿…é¡»ä¸€ä¸€å¯¹åº”ï¼Œarray[i]ä¸åœ¨içš„ä½ç½®ä¸Šï¼Œå°±æŠŠå®ƒæ”¾åˆ°ä½ç½®iä¸Šå»
 		{
-			if (array[i] == array[array[i]]) // Òª½»»¥µÄÊı¾İ²»ÄÜÏàµÈ£¬Èç¹ûÏàµÈ£¬¾ÍÕÒ³öÀ´ÁË£¬Èç¹ûÕâÀï²»·µ»Ø£¬»áµ¼ÖÂËÀÑ­»·
+			if (array[i] == array[array[i]]) // è¦äº¤äº’çš„æ•°æ®ä¸èƒ½ç›¸ç­‰ï¼Œå¦‚æœç›¸ç­‰ï¼Œå°±æ‰¾å‡ºæ¥äº†ï¼Œå¦‚æœè¿™é‡Œä¸è¿”å›ï¼Œä¼šå¯¼è‡´æ­»å¾ªç¯
 			{
-				iduplication = array[i]; //Ò»¸öÖØ¸´µÄÊé
+				iduplication = array[i]; //ä¸€ä¸ªé‡å¤çš„ä¹¦
 				return true;
 			}
 			int tmp = array[i];
 			array[i] = array[tmp];
-			array[tmp] = tmp;			
+			array[tmp] = tmp;
 		}
 	}
 	return false;
 }
-
 
 bool contains(int array[], int length, int number)
 {
@@ -52,7 +50,7 @@ bool contains(int array[], int length, int number)
 	return false;
 }
 
-void test(char* testName, int numbers[], int lengthNumbers, int expected[], int expectedExpected, bool validArgument)
+void test(char *testName, int numbers[], int lengthNumbers, int expected[], int expectedExpected, bool validArgument)
 {
 	printf("%s begins: ", testName);
 
@@ -75,55 +73,55 @@ void test(char* testName, int numbers[], int lengthNumbers, int expected[], int 
 		printf("FAILED.\n");
 }
 
-// ÖØ¸´µÄÊı×ÖÊÇÊı×éÖĞ×îĞ¡µÄÊı×Ö
+// é‡å¤çš„æ•°å­—æ˜¯æ•°ç»„ä¸­æœ€å°çš„æ•°å­—
 void test1()
 {
-	int numbers[] = { 2, 1, 3, 1, 4 };
-	int duplications[] = { 1 };
+	int numbers[] = {2, 1, 3, 1, 4};
+	int duplications[] = {1};
 	test("Test1", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), true);
 }
 
-// ÖØ¸´µÄÊı×ÖÊÇÊı×éÖĞ×î´óµÄÊı×Ö
+// é‡å¤çš„æ•°å­—æ˜¯æ•°ç»„ä¸­æœ€å¤§çš„æ•°å­—
 void test2()
 {
-	int numbers[] = { 2, 4, 3, 1, 4 };
-	int duplications[] = { 4 };
+	int numbers[] = {2, 4, 3, 1, 4};
+	int duplications[] = {4};
 	test("Test2", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), true);
 }
 
-// Êı×éÖĞ´æÔÚ¶à¸öÖØ¸´µÄÊı×Ö
+// æ•°ç»„ä¸­å­˜åœ¨å¤šä¸ªé‡å¤çš„æ•°å­—
 void test3()
 {
-	int numbers[] = { 2, 4, 2, 1, 4 };
-	int duplications[] = { 2, 4 };
+	int numbers[] = {2, 4, 2, 1, 4};
+	int duplications[] = {2, 4};
 	test("Test3", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), true);
 }
 
-// Ã»ÓĞÖØ¸´µÄÊı×Ö
+// æ²¡æœ‰é‡å¤çš„æ•°å­—
 void test4()
 {
-	int numbers[] = { 2, 1, 3, 0, 4 };
-	int duplications[] = { -1 }; // not in use in the test function
+	int numbers[] = {2, 1, 3, 0, 4};
+	int duplications[] = {-1}; // not in use in the test function
 	test("Test4", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), false);
 }
 
-// Ã»ÓĞÖØ¸´µÄÊı×Ö
+// æ²¡æœ‰é‡å¤çš„æ•°å­—
 void test5()
 {
-	int numbers[] = { 2, 1, 3, 5, 4 };
-	int duplications[] = { -1 }; // not in use in the test function
+	int numbers[] = {2, 1, 3, 5, 4};
+	int duplications[] = {-1}; // not in use in the test function
 	test("Test5", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int), false);
 }
 
-// ÎŞĞ§µÄÊäÈë
+// æ— æ•ˆçš„è¾“å…¥
 void test6()
 {
-	int* numbers = nullptr;
-	int duplications[] = { -1 }; // not in use in the test function
+	int *numbers = nullptr;
+	int duplications[] = {-1}; // not in use in the test function
 	test("Test6", numbers, 0, duplications, sizeof(duplications) / sizeof(int), false);
 }
 
-int  main()
+int main()
 {
 	test1();
 	test2();
@@ -131,6 +129,6 @@ int  main()
 	test4();
 	test5();
 	test6();
-//	system("pause");
+	//	system("pause");
 	return 0;
 }

@@ -1,11 +1,12 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 
 void print()
 {
 	int i, j, k, f;
-	for (i = 1; i <= 4; i++) {
+	for (i = 1; i <= 4; i++)
+	{
 		for (j = 1; j <= 30; j++)
 			cout << " ";
 		for (k = 1; k <= 8 - 2 * i; k++)
@@ -14,7 +15,8 @@ void print()
 			cout << '*';
 		cout << endl;
 	}
-	for (i = 1; i <= 3; i++) {
+	for (i = 1; i <= 3; i++)
+	{
 		for (j = 1; j <= 30; j++)
 			cout << " ";
 		for (f = 1; f <= 7 - 2 * i; f++)
@@ -22,7 +24,6 @@ void print()
 		cout << endl;
 	}
 }
-
 
 void isLeapYear()
 {
@@ -57,9 +58,14 @@ void annotation()
 
 union myunion
 {
-	struct { int x; int y; int z; }u;
+	struct
+	{
+		int x;
+		int y;
+		int z;
+	} u;
 	int k;
-}a;
+} a;
 
 void myun()
 {
@@ -73,7 +79,7 @@ void myun()
 void c11()
 {
 	string str("some string");
-	for (auto &c:str)
+	for (auto &c : str)
 	{
 		c = toupper(c);
 	}
