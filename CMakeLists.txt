@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6) 
+cmake_minimum_required(VERSION 3.0) 
 ###################################################################################
 project(code)
 
@@ -55,6 +55,14 @@ if(CURL_FOUND)
 	message(STATUS "found curl") 
 endif()
 
+
+#find_package(BOOST) 
+#if(BOOST_FOUND) 
+#	message(STATUS "found boost") 
+#endif()
+
+#会用到boost
+add_subdirectory(3rd)
 add_subdirectory(algorithm) 
 add_subdirectory(base) 
 add_subdirectory(designpatterns)
