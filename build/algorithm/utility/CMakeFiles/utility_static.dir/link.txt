@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/libutility.a  CMakeFiles/utility_static.dir/myBinTree.cpp.o
-/usr/bin/ranlib ../../lib/libutility.a

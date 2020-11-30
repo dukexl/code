@@ -40,11 +40,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/mnt/hgfs/learngit/code/build/3rd/cmake_install.cmake")
-  include("/mnt/hgfs/learngit/code/build/algorithm/cmake_install.cmake")
-  include("/mnt/hgfs/learngit/code/build/base/cmake_install.cmake")
-  include("/mnt/hgfs/learngit/code/build/designpatterns/cmake_install.cmake")
-  include("/mnt/hgfs/learngit/code/build/leetcode/cmake_install.cmake")
-  include("/mnt/hgfs/learngit/code/build/net/cmake_install.cmake")
 
 endif()
 
