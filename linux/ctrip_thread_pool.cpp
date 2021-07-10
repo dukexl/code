@@ -106,13 +106,10 @@ void* ctrip_thread_routine(void* thread_param)
             pthread_cond_wait(&g_threadinfo.cond, &g_threadinfo.mutex);
 
             if (!g_threadinfo.thread_running)
-                break;
-
-            current = ctrip_thread_pool_retrieve_task();
-
-            if (current != NULL)
-                break;
+                break;            
         }// end inner-while-loop
+
+        current = ctrip_thread_pool_retrieve_task();
 
         pthread_mutex_unlock(&g_threadinfo.mutex);
 
