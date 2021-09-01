@@ -51,22 +51,11 @@ message("  LIBRARY_OUTPUT_PATH: ${LIBRARY_OUTPUT_PATH}")
 string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE)
 message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_TYPE}})
 
-# find_package(CURL) 
-# if(CURL_FOUND) 
-# 	message(STATUS "found curl") 
-# endif()
 
-
-# find_package(BOOST) 
-# if(BOOST_FOUND) 
-# 	message(STATUS "found boost") 
-# endif()
-
-#会用到boost
-#add_subdirectory(3rd)
-#add_subdirectory(algorithm) 
+add_subdirectory(3rd)
+add_subdirectory(algorithm) 
 add_subdirectory(base) 
-#add_subdirectory(designpatterns)
-#add_subdirectory(leetcode)
-#add_subdirectory(net)
+add_subdirectory(designpatterns)
 add_subdirectory(linux)
+
+add_subdirectory(sylar)
