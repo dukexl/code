@@ -1,5 +1,5 @@
-/mnt/hgfs/learngit/code/build/CMakeFiles/rebuild_cache.dir
-/mnt/hgfs/learngit/code/build/CMakeFiles/edit_cache.dir
-/mnt/hgfs/learngit/code/build/3rd/CMakeFiles/rebuild_cache.dir
-/mnt/hgfs/learngit/code/build/3rd/CMakeFiles/edit_cache.dir
-/mnt/hgfs/learngit/code/build/3rd/CMakeFiles/boost_vision.dir
+/home/xuli/jzy/learn/code/build/CMakeFiles/rebuild_cache.dir
+/home/xuli/jzy/learn/code/build/CMakeFiles/edit_cache.dir
+/home/xuli/jzy/learn/code/build/linux/CMakeFiles/rebuild_cache.dir
+/home/xuli/jzy/learn/code/build/linux/CMakeFiles/edit_cache.dir
+/home/xuli/jzy/learn/code/build/linux/CMakeFiles/ctrip_test.dir
