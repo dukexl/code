@@ -81,7 +81,7 @@ void c11()
 	string str("some string");
 	for (auto &c : str)
 	{
-		c = toupper(c);
+		c = static_cast<char>(toupper(c));
 	}
 	cout << str << endl;
 }

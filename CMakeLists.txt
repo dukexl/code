@@ -14,9 +14,10 @@ set(CXX_FLAGS
     -D_FILE_OFFSET_BITS=64
     -Wall
     -Wextra
-    -Werror
-    -Wconversion
+    # -Werror
+    -Wno-conversion
     -Wno-unused-parameter
+    -Wno-sign-compare
     # -Wold-style-cast
     -Woverloaded-virtual
     -Wpointer-arith
@@ -64,7 +65,7 @@ message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_T
 #会用到boost
 #add_subdirectory(3rd)
 #add_subdirectory(algorithm) 
-#add_subdirectory(base) 
+add_subdirectory(base) 
 #add_subdirectory(designpatterns)
 #add_subdirectory(leetcode)
 #add_subdirectory(net)
