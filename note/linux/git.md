@@ -12,10 +12,6 @@
 4，git push
 
 
-
-
-
-
 第三 linux系统的一些问题
 echo 'source /opt/centos/devtoolset-1.1/enable' >> ~/.bash_profile 
 source ~/.bash_profile 每次重新电脑后gcc会变成低版本的gcc

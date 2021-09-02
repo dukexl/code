@@ -210,9 +210,5 @@ include_directories(./include) 增加头文件目录
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 set(CMAKE_CXX_STANDARD 14)
 
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-set(CMAKE_CXX_STANDARD 14)
-
 14.6 add_test
-add_test(NAME craft_test
-         COMMAND craft --gtest_output='xml:report.xml')
+add_test(NAME craft_test COMMAND craft --gtest_output='xml:report.xml')

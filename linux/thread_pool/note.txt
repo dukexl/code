@@ -1,3 +1,0 @@
-1.帮助命令  man whatis which info
-2.文件及目录管理 mkdir rm  mv cp find cd pwd ls  locate cat chown chmod ln 
-   ls proc/*.c >list 2>&1
