@@ -2,9 +2,18 @@
 #include <boost/config.hpp>
 #include <boost/timer.hpp>
 #include <iostream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <boost/program_options.hpp>
+#include <chrono>
+#include <time.h>
 using namespace boost;
-using std::cout;
-using std::endl;
+namespace bpo = boost::program_options;
+using namespace std;
 
 int version(int argc, char *argv[])
 {
@@ -20,20 +29,6 @@ int version(int argc, char *argv[])
 	cout << "now timespan:" << t.elapsed() << "s" << endl;
 	return 0;
 }
-
-#include <iostream>
-#include <string>
-#include <vector>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <boost/program_options.hpp>
-#include <chrono>
-
-#include <time.h>
-
-namespace bpo = boost::program_options;
-using namespace std;
 
 int test01(int argc, char const *argv[])
 {

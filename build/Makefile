@@ -117,95 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named codestyle
+# Target rules for targets named boost_vision
 
 # Build rule for target.
-codestyle: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codestyle
-.PHONY : codestyle
+boost_vision: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_vision
+.PHONY : boost_vision
 
 # fast build rule for target.
-codestyle/fast:
-	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/codestyle.dir/build.make base/base/CMakeFiles/codestyle.dir/build
-.PHONY : codestyle/fast
-
-#=============================================================================
-# Target rules for targets named RAII
-
-# Build rule for target.
-RAII: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RAII
-.PHONY : RAII
-
-# fast build rule for target.
-RAII/fast:
-	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/RAII.dir/build.make base/base/CMakeFiles/RAII.dir/build
-.PHONY : RAII/fast
-
-#=============================================================================
-# Target rules for targets named print
-
-# Build rule for target.
-print: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print
-.PHONY : print
-
-# fast build rule for target.
-print/fast:
-	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/print.dir/build.make base/base/CMakeFiles/print.dir/build
-.PHONY : print/fast
-
-#=============================================================================
-# Target rules for targets named override
-
-# Build rule for target.
-override: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 override
-.PHONY : override
-
-# fast build rule for target.
-override/fast:
-	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/override.dir/build.make base/base/CMakeFiles/override.dir/build
-.PHONY : override/fast
-
-#=============================================================================
-# Target rules for targets named sort
-
-# Build rule for target.
-sort: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sort
-.PHONY : sort
-
-# fast build rule for target.
-sort/fast:
-	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/sort.dir/build.make base/cpp_study/CMakeFiles/sort.dir/build
-.PHONY : sort/fast
-
-#=============================================================================
-# Target rules for targets named version
-
-# Build rule for target.
-version: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 version
-.PHONY : version
-
-# fast build rule for target.
-version/fast:
-	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/version.dir/build.make base/cpp_study/CMakeFiles/version.dir/build
-.PHONY : version/fast
-
-#=============================================================================
-# Target rules for targets named ctrip_test
-
-# Build rule for target.
-ctrip_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ctrip_test
-.PHONY : ctrip_test
-
-# fast build rule for target.
-ctrip_test/fast:
-	$(MAKE) $(MAKESILENT) -f linux/CMakeFiles/ctrip_test.dir/build.make linux/CMakeFiles/ctrip_test.dir/build
-.PHONY : ctrip_test/fast
+boost_vision/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/build
+.PHONY : boost_vision/fast
 
 # Help Target
 help:
@@ -215,13 +137,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... RAII"
-	@echo "... codestyle"
-	@echo "... ctrip_test"
-	@echo "... override"
-	@echo "... print"
-	@echo "... sort"
-	@echo "... version"
+	@echo "... boost_vision"
 .PHONY : help
 
 

@@ -12,7 +12,8 @@ int main()
     std::cout << std::endl;
 
     // auto f = [捕获参数列表](函数参数列表) mutable throw(类型)->返回值类型 {函数语句};
-    auto bubble_sort = [=]() mutable {
+    auto bubble_sort = [=]() mutable
+    {
         for (size_t i = 0; i < len - 1; i++)
         {
             for (size_t j = 0; j < len - i - 1; j++)
@@ -33,7 +34,8 @@ int main()
 
     bubble_sort();
 
-    auto select_sort = [=]() mutable {
+    auto select_sort = [=]() mutable
+    {
         for (size_t i = 0; i < len - 1; i++)
         {
             int min = i;
@@ -55,7 +57,8 @@ int main()
     };
     select_sort();
 
-    auto insert_sort = [=]() mutable {
+    auto insert_sort = [=]() mutable
+    {
         for (size_t i = 1; i < len; i++)
         {
             for (size_t j = i; j > 0; j--)
