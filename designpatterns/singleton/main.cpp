@@ -2,8 +2,6 @@
 #include <iostream>
 using namespace std;
 
-Singleton *Singleton::pSingleton = new Singleton();
-
 int main(int argc, char *argv[])
 {
 	Singleton *singleton1 = &Singleton::GetInstence();

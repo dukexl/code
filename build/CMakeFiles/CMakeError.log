@@ -1,0 +1,61 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_57b61/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_57b61.dir/build.make CMakeFiles/cmTC_57b61.dir/build
+gmake[1]: 进入目录“/home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_57b61.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_57b61.dir/src.c.o -c /home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_57b61
+/home/xuli/tool/cmake-3.20.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57b61.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_57b61.dir/src.c.o -o cmTC_57b61 
+CMakeFiles/cmTC_57b61.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x2d)：对‘pthread_create’未定义的引用
+src.c:(.text+0x39)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x45)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x56)：对‘pthread_join’未定义的引用
+src.c:(.text+0x6a)：对‘pthread_atfork’未定义的引用
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_57b61] 错误 1
+gmake[1]: 离开目录“/home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_57b61/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b4be4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b4be4.dir/build.make CMakeFiles/cmTC_b4be4.dir/build
+gmake[1]: 进入目录“/home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_b4be4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_b4be4.dir/CheckFunctionExists.c.o -c /home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b4be4
+/home/xuli/tool/cmake-3.20.0-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4be4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_b4be4.dir/CheckFunctionExists.c.o -o cmTC_b4be4  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_b4be4] 错误 1
+gmake[1]: 离开目录“/home/xuli/jzy/learn/code/build/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_b4be4/fast] 错误 2
+
+
+
