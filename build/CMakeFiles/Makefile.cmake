@@ -9,6 +9,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../3rd/CMakeLists.txt"
   "../3rd/boost/CMakeLists.txt"
+  "../3rd/cmake/FindPulsar.cmake"
+  "../3rd/cmake/FindSqlite3.cmake"
+  "../3rd/kafka/CMakeLists.txt"
+  "../3rd/protobuf/CMakeLists.txt"
+  "../3rd/pulsar/CMakeLists.txt"
+  "../3rd/sqlite/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.20.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.20.0/CMakeCXXCompiler.cmake"
@@ -43,6 +49,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CMakeTestCXXCompiler.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CMakeTestCompilerCommon.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CMakeUnixFindMake.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CheckCSourceCompiles.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CheckFunctionExists.c"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CheckIncludeFile.c.in"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CheckIncludeFile.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/CheckLibraryExists.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Compiler/ADSP-DetermineCompiler.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
@@ -97,6 +108,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/FindBoost.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/FindPackageMessage.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/FindProtobuf.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/FindThreads.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Internal/CheckSourceCompiles.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Internal/FeatureTesting.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Platform/Linux-Determine-CXX.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Platform/Linux-GNU-C.cmake"
@@ -104,6 +118,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Platform/Linux-GNU.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Platform/Linux.cmake"
   "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/Platform/UnixPaths.cmake"
+  "/home/xuli/tool/cmake-3.20.0-linux-x86_64/share/cmake-3.20/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -122,9 +137,17 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "3rd/CMakeFiles/CMakeDirectoryInformation.cmake"
   "3rd/boost/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "3rd/kafka/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "3rd/protobuf/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "3rd/sqlite/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "3rd/pulsar/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "3rd/boost/CMakeFiles/boost_vision.dir/DependInfo.cmake"
+  "3rd/kafka/CMakeFiles/kafka.dir/DependInfo.cmake"
+  "3rd/protobuf/CMakeFiles/protobuf_example.dir/DependInfo.cmake"
+  "3rd/sqlite/CMakeFiles/sqlite_demo.dir/DependInfo.cmake"
+  "3rd/pulsar/CMakeFiles/pulsar_test.dir/DependInfo.cmake"
   )

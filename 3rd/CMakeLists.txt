@@ -1,4 +1,7 @@
 message("CMAKE_CURRENT_LIST_DIR" ${CMAKE_CURRENT_LIST_DIR})
-# set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 add_subdirectory(boost)
+add_subdirectory(kafka)
+add_subdirectory(protobuf)
+add_subdirectory(sqlite)
+add_subdirectory(pulsar)

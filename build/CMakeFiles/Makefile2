@@ -79,14 +79,26 @@ clean: 3rd/clean
 
 # Recursive "all" directory target.
 3rd/all: 3rd/boost/all
+3rd/all: 3rd/kafka/all
+3rd/all: 3rd/protobuf/all
+3rd/all: 3rd/sqlite/all
+3rd/all: 3rd/pulsar/all
 .PHONY : 3rd/all
 
 # Recursive "preinstall" directory target.
 3rd/preinstall: 3rd/boost/preinstall
+3rd/preinstall: 3rd/kafka/preinstall
+3rd/preinstall: 3rd/protobuf/preinstall
+3rd/preinstall: 3rd/sqlite/preinstall
+3rd/preinstall: 3rd/pulsar/preinstall
 .PHONY : 3rd/preinstall
 
 # Recursive "clean" directory target.
 3rd/clean: 3rd/boost/clean
+3rd/clean: 3rd/kafka/clean
+3rd/clean: 3rd/protobuf/clean
+3rd/clean: 3rd/sqlite/clean
+3rd/clean: 3rd/pulsar/clean
 .PHONY : 3rd/clean
 
 #=============================================================================
@@ -103,6 +115,66 @@ clean: 3rd/clean
 # Recursive "clean" directory target.
 3rd/boost/clean: 3rd/boost/CMakeFiles/boost_vision.dir/clean
 .PHONY : 3rd/boost/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/kafka
+
+# Recursive "all" directory target.
+3rd/kafka/all: 3rd/kafka/CMakeFiles/kafka.dir/all
+.PHONY : 3rd/kafka/all
+
+# Recursive "preinstall" directory target.
+3rd/kafka/preinstall:
+.PHONY : 3rd/kafka/preinstall
+
+# Recursive "clean" directory target.
+3rd/kafka/clean: 3rd/kafka/CMakeFiles/kafka.dir/clean
+.PHONY : 3rd/kafka/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/protobuf
+
+# Recursive "all" directory target.
+3rd/protobuf/all: 3rd/protobuf/CMakeFiles/protobuf_example.dir/all
+.PHONY : 3rd/protobuf/all
+
+# Recursive "preinstall" directory target.
+3rd/protobuf/preinstall:
+.PHONY : 3rd/protobuf/preinstall
+
+# Recursive "clean" directory target.
+3rd/protobuf/clean: 3rd/protobuf/CMakeFiles/protobuf_example.dir/clean
+.PHONY : 3rd/protobuf/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/pulsar
+
+# Recursive "all" directory target.
+3rd/pulsar/all: 3rd/pulsar/CMakeFiles/pulsar_test.dir/all
+.PHONY : 3rd/pulsar/all
+
+# Recursive "preinstall" directory target.
+3rd/pulsar/preinstall:
+.PHONY : 3rd/pulsar/preinstall
+
+# Recursive "clean" directory target.
+3rd/pulsar/clean: 3rd/pulsar/CMakeFiles/pulsar_test.dir/clean
+.PHONY : 3rd/pulsar/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/sqlite
+
+# Recursive "all" directory target.
+3rd/sqlite/all: 3rd/sqlite/CMakeFiles/sqlite_demo.dir/all
+.PHONY : 3rd/sqlite/all
+
+# Recursive "preinstall" directory target.
+3rd/sqlite/preinstall:
+.PHONY : 3rd/sqlite/preinstall
+
+# Recursive "clean" directory target.
+3rd/sqlite/clean: 3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean
+.PHONY : 3rd/sqlite/clean
 
 #=============================================================================
 # Target rules for target 3rd/boost/CMakeFiles/boost_vision.dir
@@ -129,6 +201,110 @@ boost_vision: 3rd/boost/CMakeFiles/boost_vision.dir/rule
 3rd/boost/CMakeFiles/boost_vision.dir/clean:
 	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/clean
 .PHONY : 3rd/boost/CMakeFiles/boost_vision.dir/clean
+
+#=============================================================================
+# Target rules for target 3rd/kafka/CMakeFiles/kafka.dir
+
+# All Build rule for target.
+3rd/kafka/CMakeFiles/kafka.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=3,4 "Built target kafka"
+.PHONY : 3rd/kafka/CMakeFiles/kafka.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/kafka/CMakeFiles/kafka.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/kafka/CMakeFiles/kafka.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/kafka/CMakeFiles/kafka.dir/rule
+
+# Convenience name for target.
+kafka: 3rd/kafka/CMakeFiles/kafka.dir/rule
+.PHONY : kafka
+
+# clean rule for target.
+3rd/kafka/CMakeFiles/kafka.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/clean
+.PHONY : 3rd/kafka/CMakeFiles/kafka.dir/clean
+
+#=============================================================================
+# Target rules for target 3rd/protobuf/CMakeFiles/protobuf_example.dir
+
+# All Build rule for target.
+3rd/protobuf/CMakeFiles/protobuf_example.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=5,6,7,8 "Built target protobuf_example"
+.PHONY : 3rd/protobuf/CMakeFiles/protobuf_example.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/protobuf/CMakeFiles/protobuf_example.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/protobuf/CMakeFiles/protobuf_example.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/protobuf/CMakeFiles/protobuf_example.dir/rule
+
+# Convenience name for target.
+protobuf_example: 3rd/protobuf/CMakeFiles/protobuf_example.dir/rule
+.PHONY : protobuf_example
+
+# clean rule for target.
+3rd/protobuf/CMakeFiles/protobuf_example.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/clean
+.PHONY : 3rd/protobuf/CMakeFiles/protobuf_example.dir/clean
+
+#=============================================================================
+# Target rules for target 3rd/sqlite/CMakeFiles/sqlite_demo.dir
+
+# All Build rule for target.
+3rd/sqlite/CMakeFiles/sqlite_demo.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=11,12 "Built target sqlite_demo"
+.PHONY : 3rd/sqlite/CMakeFiles/sqlite_demo.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/sqlite/CMakeFiles/sqlite_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/sqlite/CMakeFiles/sqlite_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/sqlite/CMakeFiles/sqlite_demo.dir/rule
+
+# Convenience name for target.
+sqlite_demo: 3rd/sqlite/CMakeFiles/sqlite_demo.dir/rule
+.PHONY : sqlite_demo
+
+# clean rule for target.
+3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean
+.PHONY : 3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean
+
+#=============================================================================
+# Target rules for target 3rd/pulsar/CMakeFiles/pulsar_test.dir
+
+# All Build rule for target.
+3rd/pulsar/CMakeFiles/pulsar_test.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=9,10 "Built target pulsar_test"
+.PHONY : 3rd/pulsar/CMakeFiles/pulsar_test.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/pulsar/CMakeFiles/pulsar_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/pulsar/CMakeFiles/pulsar_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/pulsar/CMakeFiles/pulsar_test.dir/rule
+
+# Convenience name for target.
+pulsar_test: 3rd/pulsar/CMakeFiles/pulsar_test.dir/rule
+.PHONY : pulsar_test
+
+# clean rule for target.
+3rd/pulsar/CMakeFiles/pulsar_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/clean
+.PHONY : 3rd/pulsar/CMakeFiles/pulsar_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

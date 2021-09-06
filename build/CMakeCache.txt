@@ -239,6 +239,54 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a library.
+KAFKA:FILEPATH=/usr/local/lib64/librdkafka++.so
+
+//Path to a file.
+PULSAR_INCLUDE_DIRS:PATH=/opt/pulsar-2.7/include
+
+//Path to a library.
+PULSAR_LIBRARIES:FILEPATH=/opt/pulsar-2.7/lib/libpulsar.so.2.7.0
+
+//Path to a library.
+PULSAR_LIBRARIES1:FILEPATH=/opt/pulsar-2.7/lib/libpulsar.so
+
+//Path to a file.
+PULSAR_ROOT:PATH=/opt/pulsar-2.7
+
+//Path to a file.
+Protobuf_INCLUDE_DIR:PATH=/usr/local/include
+
+//Path to a library.
+Protobuf_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotobuf.so
+
+//Path to a library.
+Protobuf_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotobuf.so
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotobuf-lite.so
+
+//Path to a library.
+Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotobuf-lite.so
+
+//The Google Protocol Buffers Compiler
+Protobuf_PROTOC_EXECUTABLE:FILEPATH=/usr/local/protobuf/bin/protoc
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotoc.so
+
+//Path to a library.
+Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotoc.so
+
+//Path to a file.
+SQLITE_INCLUDE_DIRS:PATH=/home/xuli/jzy/learn/code/3rd/sqlite/include
+
+//Path to a library.
+SQLITE_LIBRARIES:FILEPATH=/home/xuli/jzy/learn/code/3rd/sqlite/lib/libsqlite3.so
+
+//Path to a file.
+SQLITE_ROOT:PATH=/home/xuli/jzy/learn/code/3rd/sqlite
+
 //Value Computed by CMake
 code_BINARY_DIR:STATIC=/home/xuli/jzy/learn/code/build
 
@@ -350,6 +398,14 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/xuli/jzy/learn/code
@@ -372,7 +428,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -417,6 +473,42 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Boost
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/home/xuli/jzy/quickfast/boost_1_57_0/include][cfound components: filesystem system program_options ][v1.57.0()]
+//Details about finding Protobuf
+FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/local/lib/libprotobuf.so;-lpthread][/usr/local/include][v3.13.0()]
+//Details about finding Pulsar
+FIND_PACKAGE_MESSAGE_DETAILS_Pulsar:INTERNAL=[/opt/pulsar-2.7/include][/opt/pulsar-2.7/lib/libpulsar.so.2.7.0][/opt/pulsar-2.7/lib/libpulsar.so][v()]
+//Details about finding SQLITE
+FIND_PACKAGE_MESSAGE_DETAILS_SQLITE:INTERNAL=[/home/xuli/jzy/learn/code/3rd/sqlite/include][/home/xuli/jzy/learn/code/3rd/sqlite/lib/libsqlite3.so][v()]
+//ADVANCED property for variable: PULSAR_INCLUDE_DIRS
+PULSAR_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PULSAR_LIBRARIES
+PULSAR_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PULSAR_LIBRARIES1
+PULSAR_LIBRARIES1-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PULSAR_ROOT
+PULSAR_ROOT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_INCLUDE_DIR
+Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
+Protobuf_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LIBRARY_RELEASE
+Protobuf_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_DEBUG
+Protobuf_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_LITE_LIBRARY_RELEASE
+Protobuf_LITE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_EXECUTABLE
+Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_DEBUG
+Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
+Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLITE_INCLUDE_DIRS
+SQLITE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLITE_LIBRARIES
+SQLITE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SQLITE_ROOT
+SQLITE_ROOT-ADVANCED:INTERNAL=1
 //Components requested for this build tree.
 _Boost_COMPONENTS_SEARCHED:INTERNAL=filesystem;program_options;system
 //Last used Boost_INCLUDE_DIR value.

@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 3.0)
 ###################################################################################
 project(code)
 
-if (CMAKE_BUILD_TYPE) 
-else() 
-	set(CMAKE_BUILD_TYPE RELEASE) 
-endif()
+# if (CMAKE_BUILD_TYPE) 
+# else() 
+# 	set(CMAKE_BUILD_TYPE RELEASE) 
+# endif()
 
+set(CMAKE_BUILD_TYPE debug) 
 set(CXX_FLAGS
     -g
     -DVALGRIND
@@ -14,15 +15,17 @@ set(CXX_FLAGS
     -D_FILE_OFFSET_BITS=64
     -Wall
     -Wextra
+    -Wno-reorder
     # -Werror
     -Wno-conversion
     -Wno-unused-parameter
     -Wno-sign-compare
     # -Wold-style-cast
     -Woverloaded-virtual
+    -Wno-shadow
     -Wpointer-arith
-    -Wshadow
-    -Wwrite-strings
+    # -Wshadow
+    -Wno-write-strings
     -Wno-format
     -march=native
     -std=c++11
@@ -53,10 +56,10 @@ string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE)
 message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_TYPE}})
 
 
-# add_subdirectory(3rd)
+add_subdirectory(3rd)
 # add_subdirectory(algorithm) 
 # add_subdirectory(base) 
 # add_subdirectory(designpatterns)
 # add_subdirectory(linux)
 
-add_subdirectory(sylar)
+# add_subdirectory(sylar)

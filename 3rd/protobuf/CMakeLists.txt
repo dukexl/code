@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.10)
+# cmake_minimum_required(VERSION 3.10)
 
 # Set the project name
-project (protobuf_example)
+# project (protobuf_example)
 set(CMAKE_CXX_STANDARD 11)
 
 # find the protobuf compiler and libraries

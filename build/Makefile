@@ -129,6 +129,58 @@ boost_vision/fast:
 	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/build
 .PHONY : boost_vision/fast
 
+#=============================================================================
+# Target rules for targets named kafka
+
+# Build rule for target.
+kafka: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kafka
+.PHONY : kafka
+
+# fast build rule for target.
+kafka/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/build
+.PHONY : kafka/fast
+
+#=============================================================================
+# Target rules for targets named protobuf_example
+
+# Build rule for target.
+protobuf_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 protobuf_example
+.PHONY : protobuf_example
+
+# fast build rule for target.
+protobuf_example/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/build
+.PHONY : protobuf_example/fast
+
+#=============================================================================
+# Target rules for targets named sqlite_demo
+
+# Build rule for target.
+sqlite_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlite_demo
+.PHONY : sqlite_demo
+
+# fast build rule for target.
+sqlite_demo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build
+.PHONY : sqlite_demo/fast
+
+#=============================================================================
+# Target rules for targets named pulsar_test
+
+# Build rule for target.
+pulsar_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pulsar_test
+.PHONY : pulsar_test
+
+# fast build rule for target.
+pulsar_test/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/build
+.PHONY : pulsar_test/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -138,6 +190,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... boost_vision"
+	@echo "... kafka"
+	@echo "... protobuf_example"
+	@echo "... pulsar_test"
+	@echo "... sqlite_demo"
 .PHONY : help
 
 
