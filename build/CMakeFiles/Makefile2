@@ -64,247 +64,314 @@ CMAKE_BINARY_DIR = /home/xuli/jzy/learn/code/build
 
 # The main recursive "all" target.
 all: 3rd/all
+all: base/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: 3rd/preinstall
+preinstall: base/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: 3rd/clean
+clean: base/clean
 .PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory 3rd
 
 # Recursive "all" directory target.
-3rd/all: 3rd/boost/all
-3rd/all: 3rd/kafka/all
-3rd/all: 3rd/protobuf/all
-3rd/all: 3rd/sqlite/all
-3rd/all: 3rd/pulsar/all
+3rd/all: 3rd/cbc/all
 .PHONY : 3rd/all
 
 # Recursive "preinstall" directory target.
-3rd/preinstall: 3rd/boost/preinstall
-3rd/preinstall: 3rd/kafka/preinstall
-3rd/preinstall: 3rd/protobuf/preinstall
-3rd/preinstall: 3rd/sqlite/preinstall
-3rd/preinstall: 3rd/pulsar/preinstall
+3rd/preinstall: 3rd/cbc/preinstall
 .PHONY : 3rd/preinstall
 
 # Recursive "clean" directory target.
-3rd/clean: 3rd/boost/clean
-3rd/clean: 3rd/kafka/clean
-3rd/clean: 3rd/protobuf/clean
-3rd/clean: 3rd/sqlite/clean
-3rd/clean: 3rd/pulsar/clean
+3rd/clean: 3rd/cbc/clean
 .PHONY : 3rd/clean
 
 #=============================================================================
-# Directory level rules for directory 3rd/boost
+# Directory level rules for directory 3rd/cbc
 
 # Recursive "all" directory target.
-3rd/boost/all: 3rd/boost/CMakeFiles/boost_vision.dir/all
-.PHONY : 3rd/boost/all
+3rd/cbc/all: 3rd/cbc/CMakeFiles/cbc_demo.dir/all
+.PHONY : 3rd/cbc/all
 
 # Recursive "preinstall" directory target.
-3rd/boost/preinstall:
-.PHONY : 3rd/boost/preinstall
+3rd/cbc/preinstall:
+.PHONY : 3rd/cbc/preinstall
 
 # Recursive "clean" directory target.
-3rd/boost/clean: 3rd/boost/CMakeFiles/boost_vision.dir/clean
-.PHONY : 3rd/boost/clean
+3rd/cbc/clean: 3rd/cbc/CMakeFiles/cbc_demo.dir/clean
+.PHONY : 3rd/cbc/clean
 
 #=============================================================================
-# Directory level rules for directory 3rd/kafka
+# Directory level rules for directory base
 
 # Recursive "all" directory target.
-3rd/kafka/all: 3rd/kafka/CMakeFiles/kafka.dir/all
-.PHONY : 3rd/kafka/all
+base/all: base/base/all
+base/all: base/cpp_study/all
+.PHONY : base/all
 
 # Recursive "preinstall" directory target.
-3rd/kafka/preinstall:
-.PHONY : 3rd/kafka/preinstall
+base/preinstall: base/base/preinstall
+base/preinstall: base/cpp_study/preinstall
+.PHONY : base/preinstall
 
 # Recursive "clean" directory target.
-3rd/kafka/clean: 3rd/kafka/CMakeFiles/kafka.dir/clean
-.PHONY : 3rd/kafka/clean
+base/clean: base/base/clean
+base/clean: base/cpp_study/clean
+.PHONY : base/clean
 
 #=============================================================================
-# Directory level rules for directory 3rd/protobuf
+# Directory level rules for directory base/base
 
 # Recursive "all" directory target.
-3rd/protobuf/all: 3rd/protobuf/CMakeFiles/protobuf_example.dir/all
-.PHONY : 3rd/protobuf/all
+base/base/all: base/base/CMakeFiles/print.dir/all
+base/base/all: base/base/CMakeFiles/codestyle.dir/all
+base/base/all: base/base/CMakeFiles/xuli_daemon.dir/all
+base/base/all: base/base/CMakeFiles/RAII.dir/all
+base/base/all: base/base/CMakeFiles/override.dir/all
+.PHONY : base/base/all
 
 # Recursive "preinstall" directory target.
-3rd/protobuf/preinstall:
-.PHONY : 3rd/protobuf/preinstall
+base/base/preinstall:
+.PHONY : base/base/preinstall
 
 # Recursive "clean" directory target.
-3rd/protobuf/clean: 3rd/protobuf/CMakeFiles/protobuf_example.dir/clean
-.PHONY : 3rd/protobuf/clean
+base/base/clean: base/base/CMakeFiles/print.dir/clean
+base/base/clean: base/base/CMakeFiles/codestyle.dir/clean
+base/base/clean: base/base/CMakeFiles/xuli_daemon.dir/clean
+base/base/clean: base/base/CMakeFiles/RAII.dir/clean
+base/base/clean: base/base/CMakeFiles/override.dir/clean
+.PHONY : base/base/clean
 
 #=============================================================================
-# Directory level rules for directory 3rd/pulsar
+# Directory level rules for directory base/cpp_study
 
 # Recursive "all" directory target.
-3rd/pulsar/all: 3rd/pulsar/CMakeFiles/pulsar_test.dir/all
-.PHONY : 3rd/pulsar/all
+base/cpp_study/all: base/cpp_study/CMakeFiles/sort.dir/all
+base/cpp_study/all: base/cpp_study/CMakeFiles/version.dir/all
+.PHONY : base/cpp_study/all
 
 # Recursive "preinstall" directory target.
-3rd/pulsar/preinstall:
-.PHONY : 3rd/pulsar/preinstall
+base/cpp_study/preinstall:
+.PHONY : base/cpp_study/preinstall
 
 # Recursive "clean" directory target.
-3rd/pulsar/clean: 3rd/pulsar/CMakeFiles/pulsar_test.dir/clean
-.PHONY : 3rd/pulsar/clean
+base/cpp_study/clean: base/cpp_study/CMakeFiles/sort.dir/clean
+base/cpp_study/clean: base/cpp_study/CMakeFiles/version.dir/clean
+.PHONY : base/cpp_study/clean
 
 #=============================================================================
-# Directory level rules for directory 3rd/sqlite
-
-# Recursive "all" directory target.
-3rd/sqlite/all: 3rd/sqlite/CMakeFiles/sqlite_demo.dir/all
-.PHONY : 3rd/sqlite/all
-
-# Recursive "preinstall" directory target.
-3rd/sqlite/preinstall:
-.PHONY : 3rd/sqlite/preinstall
-
-# Recursive "clean" directory target.
-3rd/sqlite/clean: 3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean
-.PHONY : 3rd/sqlite/clean
-
-#=============================================================================
-# Target rules for target 3rd/boost/CMakeFiles/boost_vision.dir
+# Target rules for target 3rd/cbc/CMakeFiles/cbc_demo.dir
 
 # All Build rule for target.
-3rd/boost/CMakeFiles/boost_vision.dir/all:
-	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/depend
-	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=1,2 "Built target boost_vision"
-.PHONY : 3rd/boost/CMakeFiles/boost_vision.dir/all
+3rd/cbc/CMakeFiles/cbc_demo.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/cbc/CMakeFiles/cbc_demo.dir/build.make 3rd/cbc/CMakeFiles/cbc_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/cbc/CMakeFiles/cbc_demo.dir/build.make 3rd/cbc/CMakeFiles/cbc_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=3,4,5 "Built target cbc_demo"
+.PHONY : 3rd/cbc/CMakeFiles/cbc_demo.dir/all
 
 # Build rule for subdir invocation for target.
-3rd/boost/CMakeFiles/boost_vision.dir/rule: cmake_check_build_system
+3rd/cbc/CMakeFiles/cbc_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/cbc/CMakeFiles/cbc_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/cbc/CMakeFiles/cbc_demo.dir/rule
+
+# Convenience name for target.
+cbc_demo: 3rd/cbc/CMakeFiles/cbc_demo.dir/rule
+.PHONY : cbc_demo
+
+# clean rule for target.
+3rd/cbc/CMakeFiles/cbc_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/cbc/CMakeFiles/cbc_demo.dir/build.make 3rd/cbc/CMakeFiles/cbc_demo.dir/clean
+.PHONY : 3rd/cbc/CMakeFiles/cbc_demo.dir/clean
+
+#=============================================================================
+# Target rules for target base/base/CMakeFiles/print.dir
+
+# All Build rule for target.
+base/base/CMakeFiles/print.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/print.dir/build.make base/base/CMakeFiles/print.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/print.dir/build.make base/base/CMakeFiles/print.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=10,11 "Built target print"
+.PHONY : base/base/CMakeFiles/print.dir/all
+
+# Build rule for subdir invocation for target.
+base/base/CMakeFiles/print.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/boost/CMakeFiles/boost_vision.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/base/CMakeFiles/print.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
-.PHONY : 3rd/boost/CMakeFiles/boost_vision.dir/rule
+.PHONY : base/base/CMakeFiles/print.dir/rule
 
 # Convenience name for target.
-boost_vision: 3rd/boost/CMakeFiles/boost_vision.dir/rule
-.PHONY : boost_vision
+print: base/base/CMakeFiles/print.dir/rule
+.PHONY : print
 
 # clean rule for target.
-3rd/boost/CMakeFiles/boost_vision.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/clean
-.PHONY : 3rd/boost/CMakeFiles/boost_vision.dir/clean
+base/base/CMakeFiles/print.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/print.dir/build.make base/base/CMakeFiles/print.dir/clean
+.PHONY : base/base/CMakeFiles/print.dir/clean
 
 #=============================================================================
-# Target rules for target 3rd/kafka/CMakeFiles/kafka.dir
+# Target rules for target base/base/CMakeFiles/codestyle.dir
 
 # All Build rule for target.
-3rd/kafka/CMakeFiles/kafka.dir/all:
-	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/depend
-	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=3,4 "Built target kafka"
-.PHONY : 3rd/kafka/CMakeFiles/kafka.dir/all
+base/base/CMakeFiles/codestyle.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/codestyle.dir/build.make base/base/CMakeFiles/codestyle.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/codestyle.dir/build.make base/base/CMakeFiles/codestyle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=6,7 "Built target codestyle"
+.PHONY : base/base/CMakeFiles/codestyle.dir/all
 
 # Build rule for subdir invocation for target.
-3rd/kafka/CMakeFiles/kafka.dir/rule: cmake_check_build_system
+base/base/CMakeFiles/codestyle.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/kafka/CMakeFiles/kafka.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/base/CMakeFiles/codestyle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
-.PHONY : 3rd/kafka/CMakeFiles/kafka.dir/rule
+.PHONY : base/base/CMakeFiles/codestyle.dir/rule
 
 # Convenience name for target.
-kafka: 3rd/kafka/CMakeFiles/kafka.dir/rule
-.PHONY : kafka
+codestyle: base/base/CMakeFiles/codestyle.dir/rule
+.PHONY : codestyle
 
 # clean rule for target.
-3rd/kafka/CMakeFiles/kafka.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/clean
-.PHONY : 3rd/kafka/CMakeFiles/kafka.dir/clean
+base/base/CMakeFiles/codestyle.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/codestyle.dir/build.make base/base/CMakeFiles/codestyle.dir/clean
+.PHONY : base/base/CMakeFiles/codestyle.dir/clean
 
 #=============================================================================
-# Target rules for target 3rd/protobuf/CMakeFiles/protobuf_example.dir
+# Target rules for target base/base/CMakeFiles/xuli_daemon.dir
 
 # All Build rule for target.
-3rd/protobuf/CMakeFiles/protobuf_example.dir/all:
-	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/depend
-	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=5,6,7,8 "Built target protobuf_example"
-.PHONY : 3rd/protobuf/CMakeFiles/protobuf_example.dir/all
+base/base/CMakeFiles/xuli_daemon.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/xuli_daemon.dir/build.make base/base/CMakeFiles/xuli_daemon.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/xuli_daemon.dir/build.make base/base/CMakeFiles/xuli_daemon.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=16,17 "Built target xuli_daemon"
+.PHONY : base/base/CMakeFiles/xuli_daemon.dir/all
 
 # Build rule for subdir invocation for target.
-3rd/protobuf/CMakeFiles/protobuf_example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/protobuf/CMakeFiles/protobuf_example.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
-.PHONY : 3rd/protobuf/CMakeFiles/protobuf_example.dir/rule
-
-# Convenience name for target.
-protobuf_example: 3rd/protobuf/CMakeFiles/protobuf_example.dir/rule
-.PHONY : protobuf_example
-
-# clean rule for target.
-3rd/protobuf/CMakeFiles/protobuf_example.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/clean
-.PHONY : 3rd/protobuf/CMakeFiles/protobuf_example.dir/clean
-
-#=============================================================================
-# Target rules for target 3rd/sqlite/CMakeFiles/sqlite_demo.dir
-
-# All Build rule for target.
-3rd/sqlite/CMakeFiles/sqlite_demo.dir/all:
-	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/depend
-	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=11,12 "Built target sqlite_demo"
-.PHONY : 3rd/sqlite/CMakeFiles/sqlite_demo.dir/all
-
-# Build rule for subdir invocation for target.
-3rd/sqlite/CMakeFiles/sqlite_demo.dir/rule: cmake_check_build_system
+base/base/CMakeFiles/xuli_daemon.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/sqlite/CMakeFiles/sqlite_demo.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/base/CMakeFiles/xuli_daemon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
-.PHONY : 3rd/sqlite/CMakeFiles/sqlite_demo.dir/rule
+.PHONY : base/base/CMakeFiles/xuli_daemon.dir/rule
 
 # Convenience name for target.
-sqlite_demo: 3rd/sqlite/CMakeFiles/sqlite_demo.dir/rule
-.PHONY : sqlite_demo
+xuli_daemon: base/base/CMakeFiles/xuli_daemon.dir/rule
+.PHONY : xuli_daemon
 
 # clean rule for target.
-3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean
-.PHONY : 3rd/sqlite/CMakeFiles/sqlite_demo.dir/clean
+base/base/CMakeFiles/xuli_daemon.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/xuli_daemon.dir/build.make base/base/CMakeFiles/xuli_daemon.dir/clean
+.PHONY : base/base/CMakeFiles/xuli_daemon.dir/clean
 
 #=============================================================================
-# Target rules for target 3rd/pulsar/CMakeFiles/pulsar_test.dir
+# Target rules for target base/base/CMakeFiles/RAII.dir
 
 # All Build rule for target.
-3rd/pulsar/CMakeFiles/pulsar_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=9,10 "Built target pulsar_test"
-.PHONY : 3rd/pulsar/CMakeFiles/pulsar_test.dir/all
+base/base/CMakeFiles/RAII.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/RAII.dir/build.make base/base/CMakeFiles/RAII.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/RAII.dir/build.make base/base/CMakeFiles/RAII.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=1,2 "Built target RAII"
+.PHONY : base/base/CMakeFiles/RAII.dir/all
 
 # Build rule for subdir invocation for target.
-3rd/pulsar/CMakeFiles/pulsar_test.dir/rule: cmake_check_build_system
+base/base/CMakeFiles/RAII.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/pulsar/CMakeFiles/pulsar_test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/base/CMakeFiles/RAII.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
-.PHONY : 3rd/pulsar/CMakeFiles/pulsar_test.dir/rule
+.PHONY : base/base/CMakeFiles/RAII.dir/rule
 
 # Convenience name for target.
-pulsar_test: 3rd/pulsar/CMakeFiles/pulsar_test.dir/rule
-.PHONY : pulsar_test
+RAII: base/base/CMakeFiles/RAII.dir/rule
+.PHONY : RAII
 
 # clean rule for target.
-3rd/pulsar/CMakeFiles/pulsar_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/clean
-.PHONY : 3rd/pulsar/CMakeFiles/pulsar_test.dir/clean
+base/base/CMakeFiles/RAII.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/RAII.dir/build.make base/base/CMakeFiles/RAII.dir/clean
+.PHONY : base/base/CMakeFiles/RAII.dir/clean
+
+#=============================================================================
+# Target rules for target base/base/CMakeFiles/override.dir
+
+# All Build rule for target.
+base/base/CMakeFiles/override.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/override.dir/build.make base/base/CMakeFiles/override.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/override.dir/build.make base/base/CMakeFiles/override.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=8,9 "Built target override"
+.PHONY : base/base/CMakeFiles/override.dir/all
+
+# Build rule for subdir invocation for target.
+base/base/CMakeFiles/override.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/base/CMakeFiles/override.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : base/base/CMakeFiles/override.dir/rule
+
+# Convenience name for target.
+override: base/base/CMakeFiles/override.dir/rule
+.PHONY : override
+
+# clean rule for target.
+base/base/CMakeFiles/override.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/override.dir/build.make base/base/CMakeFiles/override.dir/clean
+.PHONY : base/base/CMakeFiles/override.dir/clean
+
+#=============================================================================
+# Target rules for target base/cpp_study/CMakeFiles/sort.dir
+
+# All Build rule for target.
+base/cpp_study/CMakeFiles/sort.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/sort.dir/build.make base/cpp_study/CMakeFiles/sort.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/sort.dir/build.make base/cpp_study/CMakeFiles/sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=12,13 "Built target sort"
+.PHONY : base/cpp_study/CMakeFiles/sort.dir/all
+
+# Build rule for subdir invocation for target.
+base/cpp_study/CMakeFiles/sort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/cpp_study/CMakeFiles/sort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : base/cpp_study/CMakeFiles/sort.dir/rule
+
+# Convenience name for target.
+sort: base/cpp_study/CMakeFiles/sort.dir/rule
+.PHONY : sort
+
+# clean rule for target.
+base/cpp_study/CMakeFiles/sort.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/sort.dir/build.make base/cpp_study/CMakeFiles/sort.dir/clean
+.PHONY : base/cpp_study/CMakeFiles/sort.dir/clean
+
+#=============================================================================
+# Target rules for target base/cpp_study/CMakeFiles/version.dir
+
+# All Build rule for target.
+base/cpp_study/CMakeFiles/version.dir/all:
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/version.dir/build.make base/cpp_study/CMakeFiles/version.dir/depend
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/version.dir/build.make base/cpp_study/CMakeFiles/version.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=14,15 "Built target version"
+.PHONY : base/cpp_study/CMakeFiles/version.dir/all
+
+# Build rule for subdir invocation for target.
+base/cpp_study/CMakeFiles/version.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base/cpp_study/CMakeFiles/version.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : base/cpp_study/CMakeFiles/version.dir/rule
+
+# Convenience name for target.
+version: base/cpp_study/CMakeFiles/version.dir/rule
+.PHONY : version
+
+# clean rule for target.
+base/cpp_study/CMakeFiles/version.dir/clean:
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/version.dir/build.make base/cpp_study/CMakeFiles/version.dir/clean
+.PHONY : base/cpp_study/CMakeFiles/version.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

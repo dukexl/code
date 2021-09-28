@@ -117,69 +117,108 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named boost_vision
+# Target rules for targets named cbc_demo
 
 # Build rule for target.
-boost_vision: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_vision
-.PHONY : boost_vision
+cbc_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cbc_demo
+.PHONY : cbc_demo
 
 # fast build rule for target.
-boost_vision/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/boost/CMakeFiles/boost_vision.dir/build.make 3rd/boost/CMakeFiles/boost_vision.dir/build
-.PHONY : boost_vision/fast
+cbc_demo/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/cbc/CMakeFiles/cbc_demo.dir/build.make 3rd/cbc/CMakeFiles/cbc_demo.dir/build
+.PHONY : cbc_demo/fast
 
 #=============================================================================
-# Target rules for targets named kafka
+# Target rules for targets named print
 
 # Build rule for target.
-kafka: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kafka
-.PHONY : kafka
+print: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print
+.PHONY : print
 
 # fast build rule for target.
-kafka/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/kafka/CMakeFiles/kafka.dir/build.make 3rd/kafka/CMakeFiles/kafka.dir/build
-.PHONY : kafka/fast
+print/fast:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/print.dir/build.make base/base/CMakeFiles/print.dir/build
+.PHONY : print/fast
 
 #=============================================================================
-# Target rules for targets named protobuf_example
+# Target rules for targets named codestyle
 
 # Build rule for target.
-protobuf_example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 protobuf_example
-.PHONY : protobuf_example
+codestyle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codestyle
+.PHONY : codestyle
 
 # fast build rule for target.
-protobuf_example/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/protobuf/CMakeFiles/protobuf_example.dir/build.make 3rd/protobuf/CMakeFiles/protobuf_example.dir/build
-.PHONY : protobuf_example/fast
+codestyle/fast:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/codestyle.dir/build.make base/base/CMakeFiles/codestyle.dir/build
+.PHONY : codestyle/fast
 
 #=============================================================================
-# Target rules for targets named sqlite_demo
+# Target rules for targets named xuli_daemon
 
 # Build rule for target.
-sqlite_demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlite_demo
-.PHONY : sqlite_demo
+xuli_daemon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xuli_daemon
+.PHONY : xuli_daemon
 
 # fast build rule for target.
-sqlite_demo/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build.make 3rd/sqlite/CMakeFiles/sqlite_demo.dir/build
-.PHONY : sqlite_demo/fast
+xuli_daemon/fast:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/xuli_daemon.dir/build.make base/base/CMakeFiles/xuli_daemon.dir/build
+.PHONY : xuli_daemon/fast
 
 #=============================================================================
-# Target rules for targets named pulsar_test
+# Target rules for targets named RAII
 
 # Build rule for target.
-pulsar_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pulsar_test
-.PHONY : pulsar_test
+RAII: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RAII
+.PHONY : RAII
 
 # fast build rule for target.
-pulsar_test/fast:
-	$(MAKE) $(MAKESILENT) -f 3rd/pulsar/CMakeFiles/pulsar_test.dir/build.make 3rd/pulsar/CMakeFiles/pulsar_test.dir/build
-.PHONY : pulsar_test/fast
+RAII/fast:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/RAII.dir/build.make base/base/CMakeFiles/RAII.dir/build
+.PHONY : RAII/fast
+
+#=============================================================================
+# Target rules for targets named override
+
+# Build rule for target.
+override: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 override
+.PHONY : override
+
+# fast build rule for target.
+override/fast:
+	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/override.dir/build.make base/base/CMakeFiles/override.dir/build
+.PHONY : override/fast
+
+#=============================================================================
+# Target rules for targets named sort
+
+# Build rule for target.
+sort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sort
+.PHONY : sort
+
+# fast build rule for target.
+sort/fast:
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/sort.dir/build.make base/cpp_study/CMakeFiles/sort.dir/build
+.PHONY : sort/fast
+
+#=============================================================================
+# Target rules for targets named version
+
+# Build rule for target.
+version: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 version
+.PHONY : version
+
+# fast build rule for target.
+version/fast:
+	$(MAKE) $(MAKESILENT) -f base/cpp_study/CMakeFiles/version.dir/build.make base/cpp_study/CMakeFiles/version.dir/build
+.PHONY : version/fast
 
 # Help Target
 help:
@@ -189,11 +228,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... boost_vision"
-	@echo "... kafka"
-	@echo "... protobuf_example"
-	@echo "... pulsar_test"
-	@echo "... sqlite_demo"
+	@echo "... RAII"
+	@echo "... cbc_demo"
+	@echo "... codestyle"
+	@echo "... override"
+	@echo "... print"
+	@echo "... sort"
+	@echo "... version"
+	@echo "... xuli_daemon"
 .PHONY : help
 
 
