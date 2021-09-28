@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-a812477a0e5e5929fc69d4d883d24bf0 3rd/protobuf/AddressBook.pb.h
