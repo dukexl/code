@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/xuli/jzy/learn/code/build/3rd/cbc/cmake_install.cmake")
+  include("/home/xuli/jzy/learn/code/build/3rd/websocket/cmake_install.cmake")
 
 endif()
 

@@ -245,7 +245,6 @@ namespace jzy_common
             des.clear();
             // 封包是先设置cbc.keyIV,再cbc.encrpt，再base64_encode
             // 解包，先base64_decode 再cbc.decrpt
-            int ilen = 0;
             // unsigned char *pDecode = Base64::base64_decode((unsigned char *)src.c_str(), &ilen);
             std::string pDecode = Base64::base64_decode(src);
             if (!pDecode.empty())

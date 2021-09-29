@@ -130,6 +130,32 @@ cbc_demo/fast:
 .PHONY : cbc_demo/fast
 
 #=============================================================================
+# Target rules for targets named websocket_service
+
+# Build rule for target.
+websocket_service: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 websocket_service
+.PHONY : websocket_service
+
+# fast build rule for target.
+websocket_service/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_service.dir/build.make 3rd/websocket/CMakeFiles/websocket_service.dir/build
+.PHONY : websocket_service/fast
+
+#=============================================================================
+# Target rules for targets named websocket_client
+
+# Build rule for target.
+websocket_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 websocket_client
+.PHONY : websocket_client
+
+# fast build rule for target.
+websocket_client/fast:
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_client.dir/build.make 3rd/websocket/CMakeFiles/websocket_client.dir/build
+.PHONY : websocket_client/fast
+
+#=============================================================================
 # Target rules for targets named print
 
 # Build rule for target.
@@ -235,6 +261,8 @@ help:
 	@echo "... print"
 	@echo "... sort"
 	@echo "... version"
+	@echo "... websocket_client"
+	@echo "... websocket_service"
 	@echo "... xuli_daemon"
 .PHONY : help
 

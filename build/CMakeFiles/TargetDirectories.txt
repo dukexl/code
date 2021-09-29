@@ -5,6 +5,10 @@
 /home/xuli/jzy/learn/code/build/3rd/cbc/CMakeFiles/rebuild_cache.dir
 /home/xuli/jzy/learn/code/build/3rd/cbc/CMakeFiles/edit_cache.dir
 /home/xuli/jzy/learn/code/build/3rd/cbc/CMakeFiles/cbc_demo.dir
+/home/xuli/jzy/learn/code/build/3rd/websocket/CMakeFiles/rebuild_cache.dir
+/home/xuli/jzy/learn/code/build/3rd/websocket/CMakeFiles/edit_cache.dir
+/home/xuli/jzy/learn/code/build/3rd/websocket/CMakeFiles/websocket_service.dir
+/home/xuli/jzy/learn/code/build/3rd/websocket/CMakeFiles/websocket_client.dir
 /home/xuli/jzy/learn/code/build/base/CMakeFiles/rebuild_cache.dir
 /home/xuli/jzy/learn/code/build/base/CMakeFiles/edit_cache.dir
 /home/xuli/jzy/learn/code/build/base/base/CMakeFiles/rebuild_cache.dir

@@ -82,14 +82,17 @@ clean: base/clean
 
 # Recursive "all" directory target.
 3rd/all: 3rd/cbc/all
+3rd/all: 3rd/websocket/all
 .PHONY : 3rd/all
 
 # Recursive "preinstall" directory target.
 3rd/preinstall: 3rd/cbc/preinstall
+3rd/preinstall: 3rd/websocket/preinstall
 .PHONY : 3rd/preinstall
 
 # Recursive "clean" directory target.
 3rd/clean: 3rd/cbc/clean
+3rd/clean: 3rd/websocket/clean
 .PHONY : 3rd/clean
 
 #=============================================================================
@@ -106,6 +109,23 @@ clean: base/clean
 # Recursive "clean" directory target.
 3rd/cbc/clean: 3rd/cbc/CMakeFiles/cbc_demo.dir/clean
 .PHONY : 3rd/cbc/clean
+
+#=============================================================================
+# Directory level rules for directory 3rd/websocket
+
+# Recursive "all" directory target.
+3rd/websocket/all: 3rd/websocket/CMakeFiles/websocket_service.dir/all
+3rd/websocket/all: 3rd/websocket/CMakeFiles/websocket_client.dir/all
+.PHONY : 3rd/websocket/all
+
+# Recursive "preinstall" directory target.
+3rd/websocket/preinstall:
+.PHONY : 3rd/websocket/preinstall
+
+# Recursive "clean" directory target.
+3rd/websocket/clean: 3rd/websocket/CMakeFiles/websocket_service.dir/clean
+3rd/websocket/clean: 3rd/websocket/CMakeFiles/websocket_client.dir/clean
+.PHONY : 3rd/websocket/clean
 
 #=============================================================================
 # Directory level rules for directory base
@@ -192,6 +212,58 @@ cbc_demo: 3rd/cbc/CMakeFiles/cbc_demo.dir/rule
 .PHONY : 3rd/cbc/CMakeFiles/cbc_demo.dir/clean
 
 #=============================================================================
+# Target rules for target 3rd/websocket/CMakeFiles/websocket_service.dir
+
+# All Build rule for target.
+3rd/websocket/CMakeFiles/websocket_service.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_service.dir/build.make 3rd/websocket/CMakeFiles/websocket_service.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_service.dir/build.make 3rd/websocket/CMakeFiles/websocket_service.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=18,19 "Built target websocket_service"
+.PHONY : 3rd/websocket/CMakeFiles/websocket_service.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/websocket/CMakeFiles/websocket_service.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/websocket/CMakeFiles/websocket_service.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/websocket/CMakeFiles/websocket_service.dir/rule
+
+# Convenience name for target.
+websocket_service: 3rd/websocket/CMakeFiles/websocket_service.dir/rule
+.PHONY : websocket_service
+
+# clean rule for target.
+3rd/websocket/CMakeFiles/websocket_service.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_service.dir/build.make 3rd/websocket/CMakeFiles/websocket_service.dir/clean
+.PHONY : 3rd/websocket/CMakeFiles/websocket_service.dir/clean
+
+#=============================================================================
+# Target rules for target 3rd/websocket/CMakeFiles/websocket_client.dir
+
+# All Build rule for target.
+3rd/websocket/CMakeFiles/websocket_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_client.dir/build.make 3rd/websocket/CMakeFiles/websocket_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_client.dir/build.make 3rd/websocket/CMakeFiles/websocket_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=16,17 "Built target websocket_client"
+.PHONY : 3rd/websocket/CMakeFiles/websocket_client.dir/all
+
+# Build rule for subdir invocation for target.
+3rd/websocket/CMakeFiles/websocket_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 3rd/websocket/CMakeFiles/websocket_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xuli/jzy/learn/code/build/CMakeFiles 0
+.PHONY : 3rd/websocket/CMakeFiles/websocket_client.dir/rule
+
+# Convenience name for target.
+websocket_client: 3rd/websocket/CMakeFiles/websocket_client.dir/rule
+.PHONY : websocket_client
+
+# clean rule for target.
+3rd/websocket/CMakeFiles/websocket_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f 3rd/websocket/CMakeFiles/websocket_client.dir/build.make 3rd/websocket/CMakeFiles/websocket_client.dir/clean
+.PHONY : 3rd/websocket/CMakeFiles/websocket_client.dir/clean
+
+#=============================================================================
 # Target rules for target base/base/CMakeFiles/print.dir
 
 # All Build rule for target.
@@ -250,7 +322,7 @@ base/base/CMakeFiles/codestyle.dir/clean:
 base/base/CMakeFiles/xuli_daemon.dir/all:
 	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/xuli_daemon.dir/build.make base/base/CMakeFiles/xuli_daemon.dir/depend
 	$(MAKE) $(MAKESILENT) -f base/base/CMakeFiles/xuli_daemon.dir/build.make base/base/CMakeFiles/xuli_daemon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=16,17 "Built target xuli_daemon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xuli/jzy/learn/code/build/CMakeFiles --progress-num=20,21 "Built target xuli_daemon"
 .PHONY : base/base/CMakeFiles/xuli_daemon.dir/all
 
 # Build rule for subdir invocation for target.
