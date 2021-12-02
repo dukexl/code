@@ -59,7 +59,6 @@ message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_T
 add_subdirectory(3rd)
 # add_subdirectory(algorithm) 
 add_subdirectory(base) 
-# add_subdirectory(designpatterns)
-# add_subdirectory(linux)
+add_subdirectory(designpatterns)
 
 # add_subdirectory(sylar)
