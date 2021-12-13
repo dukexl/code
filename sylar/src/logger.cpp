@@ -4,7 +4,7 @@
  * @Author: xuli
  * @Date: 2021-12-02 20:59:15
  * @LastEditors: xuli
- * @LastEditTime: 2021-12-09 22:02:27
+ * @LastEditTime: 2021-12-13 22:08:10
  */
 #include "logger.h"
 #include <map>
@@ -131,7 +131,7 @@ namespace sylar
 
     void LogFormatter::init()
     {
-        std::vector<std::string, std::string, int> > vec;
+        // std::vector<std::string, std::string, int> > vec;
         std::string nstr;
         for (size_t i = 0; i < m_pattern.size(); ++i)
         {
@@ -141,7 +141,6 @@ namespace sylar
             }
         }
     }
-}
 
 /************************** LogFormatter class end *******************/
 

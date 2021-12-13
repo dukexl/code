@@ -4,9 +4,11 @@
  * @Author: xuli
  * @Date: 2021-12-12 23:20:30
  * @LastEditors: xuli
- * @LastEditTime: 2021-12-12 23:22:10
+ * @LastEditTime: 2021-12-13 22:42:56
 -->
+
 1 栈和队列
+1）设计一个有 gitMin 功能的栈
 2 链表问题
 3 二叉树问题
 4 递归和动态规划
